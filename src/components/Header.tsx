@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const navItems = [
   { href: "/fiscalite", label: "Fiscalité" },
@@ -11,17 +14,19 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="site-header sticky top-0 z-50 border-b border-[var(--border)] bg-white/95 backdrop-blur">
-      <div className="container-site">
-        <div className="grid min-h-[84px] grid-cols-[auto_1fr_auto] items-center gap-4">
-          <div className="justify-self-start">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex min-h-[72px] items-center justify-between gap-4">
+          <div className="shrink-0">
             <Link href="/" className="text-2xl font-bold text-[var(--primary)]">
               Guide<span className="text-slate-500">SCPI</span>
             </Link>
           </div>
 
-          <div className="flex justify-center overflow-x-auto">
+          <div className="hidden justify-center overflow-x-auto lg:flex">
             <nav className="flex items-center rounded-full border border-[var(--border)] bg-white px-3 py-2 shadow-[0_4px_18px_rgba(15,23,42,0.05)] whitespace-nowrap">
               {navItems.map((item, index) => (
                 <div key={item.href} className="flex items-center">
@@ -40,12 +45,39 @@ export default function Header() {
             </nav>
           </div>
 
-          <div className="justify-self-end">
-            <Link href="/guide-pdf" className="btn-primary">
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setOpen(!open)}
+              className="rounded-full border border-[var(--border)] px-4 py-3 text-sm font-bold text-[var(--primary)] lg:hidden"
+              aria-label="Ouvrir le menu"
+            >
+              Menu
+            </button>
+
+            <Link
+              href="/guide-pdf"
+              className="btn-primary whitespace-nowrap px-4 py-3 text-sm sm:px-6 sm:text-base"
+            >
               Télécharger le guide
             </Link>
           </div>
         </div>
+
+        {open ? (
+          <nav className="grid gap-2 pb-4 lg:hidden">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                className="rounded-2xl border border-[var(--border)] bg-white px-4 py-3 text-sm font-semibold text-slate-800 shadow-sm"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        ) : null}
       </div>
     </header>
   );

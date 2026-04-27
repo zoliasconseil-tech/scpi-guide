@@ -28,7 +28,11 @@ function Container({
   children: ReactNode;
   className?: string;
 }) {
-  return <div className={`container-site ${className}`}>{children}</div>;
+  return (
+    <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
+      {children}
+    </div>
+  );
 }
 
 function Title({
@@ -45,26 +49,18 @@ function Title({
       ? children.replace(accent, `__ACCENT__${accent}__ACCENT__`)
       : children;
 
+  const titleClass = `text-3xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-4xl lg:text-5xl ${
+    center ? "text-center" : ""
+  }`;
+
   if (typeof content !== "string") {
-    return (
-      <h2
-        className={`text-4xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-5xl ${
-          center ? "text-center" : ""
-        }`}
-      >
-        {children}
-      </h2>
-    );
+    return <h2 className={titleClass}>{children}</h2>;
   }
 
   const parts = content.split("__ACCENT__");
 
   return (
-    <h2
-      className={`text-4xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-5xl ${
-        center ? "text-center" : ""
-      }`}
-    >
+    <h2 className={titleClass}>
       {parts.map((part, index) =>
         index % 2 === 1 ? (
           <span key={`${part}-${index}`} className="text-[#4d7fd6]">
@@ -86,14 +82,16 @@ function InfoCard({
   children: ReactNode;
 }) {
   return (
-    <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
-      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#eaf1fb] text-2xl">
+    <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-8">
+      <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-[#eaf1fb] text-2xl sm:h-14 sm:w-14">
         <span aria-hidden="true">◌</span>
       </div>
-      <h3 className="text-2xl font-bold uppercase tracking-tight text-[#4d7fd6]">
+      <h3 className="text-xl font-bold uppercase tracking-tight text-[#4d7fd6] sm:text-2xl">
         {title}
       </h3>
-      <div className="mt-5 text-lg leading-9 text-slate-700">{children}</div>
+      <div className="mt-4 text-base leading-8 text-slate-700 sm:mt-5 sm:text-lg sm:leading-9">
+        {children}
+      </div>
     </div>
   );
 }
@@ -109,12 +107,16 @@ function BluePanel({
 }) {
   return (
     <div
-      className={`rounded-[28px] bg-[#4d7fd6] text-white shadow-[0_16px_40px_rgba(31,59,119,0.18)] ${
-        compact ? "p-8" : "p-10"
+      className={`rounded-[24px] bg-[#4d7fd6] text-white shadow-[0_16px_40px_rgba(31,59,119,0.18)] ${
+        compact ? "p-6 sm:p-8" : "p-6 sm:p-10"
       }`}
     >
-      <h3 className="text-3xl font-bold leading-tight tracking-tight">{title}</h3>
-      <div className="mt-6 text-lg leading-9 text-white/95">{children}</div>
+      <h3 className="text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+        {title}
+      </h3>
+      <div className="mt-5 text-base leading-8 text-white/95 sm:mt-6 sm:text-lg sm:leading-9">
+        {children}
+      </div>
     </div>
   );
 }
@@ -127,20 +129,26 @@ function BeigePanel({
   children: ReactNode;
 }) {
   return (
-    <div className="rounded-[28px] bg-[#f5c455] p-8 text-[#1f3b77] shadow-[0_12px_30px_rgba(0,0,0,0.06)]">
-      <h3 className="text-3xl font-bold leading-tight tracking-tight">{title}</h3>
-      <div className="mt-6 text-lg leading-9">{children}</div>
+    <div className="rounded-[24px] bg-[#f5c455] p-6 text-[#1f3b77] shadow-[0_12px_30px_rgba(0,0,0,0.06)] sm:p-8">
+      <h3 className="text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
+        {title}
+      </h3>
+      <div className="mt-5 text-base leading-8 sm:mt-6 sm:text-lg sm:leading-9">
+        {children}
+      </div>
     </div>
   );
 }
 
 function CheckList({ items }: { items: ReactNode[] }) {
   return (
-    <ul className="space-y-7">
+    <ul className="space-y-6 sm:space-y-7">
       {items.map((item, index) => (
-        <li key={index} className="flex gap-4">
-          <div className="mt-1 text-2xl font-bold text-[#1f3b77]">✓</div>
-          <div className="text-lg leading-9 text-slate-700 sm:text-xl">{item}</div>
+        <li key={index} className="flex gap-3 sm:gap-4">
+          <div className="mt-1 text-xl font-bold text-[#1f3b77] sm:text-2xl">✓</div>
+          <div className="text-base leading-8 text-slate-700 sm:text-xl sm:leading-9">
+            {item}
+          </div>
         </li>
       ))}
     </ul>
@@ -158,20 +166,26 @@ function SimpleTable() {
   ];
 
   return (
-    <div className="overflow-x-auto rounded-[28px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
-      <table className="min-w-full text-left">
+    <div className="overflow-x-auto rounded-[24px] border border-slate-200 bg-white shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+      <table className="min-w-[720px] text-left">
         <thead className="bg-[#eaf1fb] text-[#1f3b77]">
           <tr>
-            <th className="px-6 py-5 text-lg font-bold">Critère</th>
-            <th className="px-6 py-5 text-lg font-bold">SCPI</th>
-            <th className="px-6 py-5 text-lg font-bold">Immobilier en direct</th>
+            <th className="px-4 py-4 text-base font-bold sm:px-6 sm:py-5 sm:text-lg">
+              Critère
+            </th>
+            <th className="px-4 py-4 text-base font-bold sm:px-6 sm:py-5 sm:text-lg">
+              SCPI
+            </th>
+            <th className="px-4 py-4 text-base font-bold sm:px-6 sm:py-5 sm:text-lg">
+              Immobilier en direct
+            </th>
           </tr>
         </thead>
         <tbody className="text-slate-700">
           {rows.map((row) => (
             <tr key={row[0]} className="border-t border-slate-200">
               {row.map((cell) => (
-                <td key={cell} className="px-6 py-5 text-base leading-8 sm:text-lg">
+                <td key={cell} className="px-4 py-4 text-base leading-8 sm:px-6 sm:py-5 sm:text-lg">
                   {cell}
                 </td>
               ))}
@@ -186,15 +200,14 @@ function SimpleTable() {
 export default function Home() {
   return (
     <>
-
       <Section tone="blue" className="relative overflow-hidden">
         <div className="absolute inset-x-0 bottom-0 h-24 bg-white [clip-path:polygon(0_35%,100%_0,100%_100%,0_100%)]" />
-        <Container className="relative z-10 py-16 sm:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <Container className="relative z-10 py-12 sm:py-20">
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
               <Title accent="Qu’est-ce qu’une SCPI ?">Qu’est-ce qu’une SCPI ?</Title>
 
-              <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
+              <div className="mt-6 space-y-5 text-base leading-8 text-slate-700 sm:mt-8 sm:text-xl sm:leading-9">
                 <p>
                   Une <strong className="text-[#1f3b77]">SCPI</strong> (Société Civile de
                   Placement Immobilier) est une solution d’investissement immobilier
@@ -217,17 +230,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="rounded-[32px] bg-[#1f3b77] p-8 text-white shadow-[0_18px_40px_rgba(31,59,119,0.25)] sm:p-10">
+            <div className="rounded-[28px] bg-[#1f3b77] p-6 text-white shadow-[0_18px_40px_rgba(31,59,119,0.25)] sm:rounded-[32px] sm:p-10">
               <div className="mx-auto mb-6 h-6 w-16 rounded-full bg-[#f5c455]" />
-              <h3 className="text-center text-4xl font-bold leading-tight tracking-tight">
+              <h3 className="text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
                 Comment allez-vous investir en SCPI ?
               </h3>
 
-              <p className="mt-6 text-center text-2xl font-semibold text-[#f5c455]">
+              <p className="mt-6 text-center text-xl font-semibold text-[#f5c455] sm:text-2xl">
                 Guide pédagogique + comparatif gratuit
               </p>
 
-              <p className="mt-4 text-center text-lg leading-8 text-white/90">
+              <p className="mt-4 text-center text-base leading-8 text-white/90 sm:text-lg">
                 Obtenez une vision claire de la fiscalité, des avantages, des critères de
                 choix et des points de vigilance avant d’investir.
               </p>
@@ -235,13 +248,13 @@ export default function Home() {
               <div className="mt-8 space-y-4">
                 <Link
                   href="/guide-pdf"
-                  className="block rounded-full bg-[#f5c455] px-6 py-4 text-center text-xl font-bold text-[#1f3b77] transition hover:opacity-95"
+                  className="block rounded-full bg-[#f5c455] px-6 py-4 text-center text-lg font-bold text-[#1f3b77] transition hover:opacity-95 sm:text-xl"
                 >
                   Télécharger le guide
                 </Link>
                 <Link
                   href="/comparaison"
-                  className="block rounded-full border border-white/20 px-6 py-4 text-center text-lg font-semibold text-white transition hover:bg-white/10"
+                  className="block rounded-full border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10 sm:text-lg"
                 >
                   Accéder au comparateur
                 </Link>
@@ -256,7 +269,7 @@ export default function Home() {
       </Section>
 
       <Section tone="white">
-        <Container className="py-4 sm:py-8">
+        <Container className="py-6 sm:py-8">
           <div className="grid gap-6 md:grid-cols-3">
             <InfoCard title="Pourquoi ?">
               <p>
@@ -283,7 +296,7 @@ export default function Home() {
             </InfoCard>
           </div>
 
-          <div className="mt-8 rounded-[24px] bg-[#1f3b77] px-8 py-7 text-xl font-semibold text-white shadow-[0_10px_25px_rgba(31,59,119,0.18)] sm:flex sm:items-center sm:justify-between sm:text-2xl">
+          <div className="mt-8 rounded-[24px] bg-[#1f3b77] px-5 py-6 text-lg font-semibold text-white shadow-[0_10px_25px_rgba(31,59,119,0.18)] sm:flex sm:items-center sm:justify-between sm:px-8 sm:py-7 sm:text-2xl">
             <span>
               Vous cherchez une information en particulier ?{" "}
               <span className="text-[#f5c455]">Consultez nos accès rapides :</span>
@@ -294,16 +307,16 @@ export default function Home() {
       </Section>
 
       <Section tone="white">
-        <Container className="py-16 sm:py-20">
-          <div className="grid gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <Container className="py-12 sm:py-20">
+          <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
             <div>
               <Title accent="Pourquoi">Pourquoi investir en SCPI ?</Title>
 
-              <p className="mt-6 text-lg leading-9 text-slate-700 sm:text-xl">
+              <p className="mt-6 text-base leading-8 text-slate-700 sm:text-xl sm:leading-9">
                 Parmi les raisons d’investir en SCPI, voici les principales :
               </p>
 
-              <div className="mt-10">
+              <div className="mt-8 sm:mt-10">
                 <CheckList
                   items={[
                     <>
@@ -356,11 +369,11 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center justify-center">
-              <div className="relative flex h-[340px] w-[340px] items-center justify-center">
-                <div className="absolute left-6 top-10 h-28 w-28 rounded-full bg-[#f5c455]" />
-                <div className="absolute right-4 top-0 h-20 w-20 rounded-full border-[6px] border-[#f5c455]" />
+              <div className="relative flex h-[260px] w-[260px] items-center justify-center sm:h-[340px] sm:w-[340px]">
+                <div className="absolute left-4 top-8 h-20 w-20 rounded-full bg-[#f5c455] sm:left-6 sm:top-10 sm:h-28 sm:w-28" />
+                <div className="absolute right-4 top-0 h-16 w-16 rounded-full border-[6px] border-[#f5c455] sm:h-20 sm:w-20" />
                 <div className="absolute inset-0 rounded-full bg-[#4d7fd6]" />
-                <div className="relative z-10 max-w-[260px] text-center text-4xl font-bold leading-tight text-white">
+                <div className="relative z-10 max-w-[210px] text-center text-2xl font-bold leading-tight text-white sm:max-w-[260px] sm:text-4xl">
                   Investir en SCPI offre des conditions d’accès facilitées.
                 </div>
               </div>
@@ -370,19 +383,19 @@ export default function Home() {
       </Section>
 
       <Section tone="blue">
-        <Container className="py-16 sm:py-20">
+        <Container className="py-12 sm:py-20">
           <Title accent="conditions" center>
             Quelles sont les conditions pour investir en SCPI ?
           </Title>
 
-          <div className="mt-14 grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="mt-10 grid gap-10 sm:mt-14 lg:grid-cols-[1.2fr_0.8fr]">
             <div>
-              <div className="grid gap-8 md:grid-cols-3">
+              <div className="grid gap-6 md:grid-cols-3">
                 <div className="rounded-[24px] bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.05)]">
                   <div className="text-sm font-bold uppercase tracking-wide text-[#4d7fd6]">
                     Règle 1
                   </div>
-                  <p className="mt-4 text-xl font-semibold leading-8 text-[#1f3b77]">
+                  <p className="mt-4 text-lg font-semibold leading-8 text-[#1f3b77] sm:text-xl">
                     Le placement doit correspondre à votre horizon patrimonial.
                   </p>
                 </div>
@@ -391,7 +404,7 @@ export default function Home() {
                   <div className="text-sm font-bold uppercase tracking-wide text-[#4d7fd6]">
                     Règle 2
                   </div>
-                  <p className="mt-4 text-xl font-semibold leading-8 text-[#1f3b77]">
+                  <p className="mt-4 text-lg font-semibold leading-8 text-[#1f3b77] sm:text-xl">
                     Le niveau de risque, de liquidité et de frais doit être compris.
                   </p>
                 </div>
@@ -400,20 +413,20 @@ export default function Home() {
                   <div className="text-sm font-bold uppercase tracking-wide text-[#4d7fd6]">
                     Règle 3
                   </div>
-                  <p className="mt-4 text-xl font-semibold leading-8 text-[#1f3b77]">
+                  <p className="mt-4 text-lg font-semibold leading-8 text-[#1f3b77] sm:text-xl">
                     Le mode de détention doit être adapté à votre fiscalité.
                   </p>
                 </div>
               </div>
 
-              <p className="mt-10 text-lg leading-9 text-slate-700 sm:text-xl">
+              <p className="mt-8 text-base leading-8 text-slate-700 sm:mt-10 sm:text-xl sm:leading-9">
                 Une SCPI est un investissement immobilier indirect. Elle peut être
                 souscrite au comptant, à crédit, en démembrement, via l’assurance-vie ou
                 dans d’autres cadres selon les offres disponibles.
               </p>
             </div>
 
-            <div className="text-lg leading-9 text-slate-700 sm:text-xl">
+            <div className="text-base leading-8 text-slate-700 sm:text-xl sm:leading-9">
               <p>
                 Avant toute souscription, il faut analyser le document d’informations
                 clés, la note d’information, les bulletins périodiques et les rapports de
@@ -437,28 +450,16 @@ export default function Home() {
       </Section>
 
       <Section tone="blue">
-        <Container className="pb-16 sm:pb-20">
+        <Container className="pb-12 sm:pb-20">
           <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
             <BluePanel title="Quels types de SCPI existent aujourd’hui ?">
-              <p>
-                Il existe plusieurs grandes familles de SCPI :
-              </p>
+              <p>Il existe plusieurs grandes familles de SCPI :</p>
               <ul className="mt-5 space-y-3">
-                <li>
-                  <strong>SCPI de rendement</strong>
-                </li>
-                <li>
-                  <strong>SCPI de capitalisation</strong>
-                </li>
-                <li>
-                  <strong>SCPI fiscales</strong>
-                </li>
-                <li>
-                  <strong>SCPI thématiques ou diversifiées</strong>
-                </li>
-                <li>
-                  <strong>SCPI européennes</strong>
-                </li>
+                <li><strong>SCPI de rendement</strong></li>
+                <li><strong>SCPI de capitalisation</strong></li>
+                <li><strong>SCPI fiscales</strong></li>
+                <li><strong>SCPI thématiques ou diversifiées</strong></li>
+                <li><strong>SCPI européennes</strong></li>
               </ul>
             </BluePanel>
 
@@ -494,7 +495,7 @@ export default function Home() {
               <SimpleTable />
             </div>
 
-            <div className="mt-8 text-lg leading-9 text-slate-700 sm:text-xl">
+            <div className="mt-8 text-base leading-8 text-slate-700 sm:text-xl sm:leading-9">
               <p>
                 La SCPI peut convenir à des investisseurs recherchant un{" "}
                 <strong className="text-[#1f3b77]">investissement plus passif</strong>,
@@ -506,13 +507,13 @@ export default function Home() {
       </Section>
 
       <Section tone="white">
-        <Container className="py-16 sm:py-20">
+        <Container className="py-12 sm:py-20">
           <Title accent="fiscalité" center>
             Quelle est la fiscalité des SCPI ?
           </Title>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-[0.95fr_1.05fr_1.05fr_1.05fr]">
-            <div className="text-lg leading-9 text-slate-700 sm:text-xl lg:pr-4">
+          <div className="mt-10 grid gap-6 sm:mt-14 lg:grid-cols-[0.95fr_1.05fr_1.05fr_1.05fr]">
+            <div className="text-base leading-8 text-slate-700 sm:text-xl sm:leading-9 lg:pr-4">
               <p>
                 La fiscalité des SCPI dépend principalement de la nature des revenus
                 perçus, du mode de détention choisi et de la situation personnelle de
@@ -531,54 +532,50 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[24px] bg-[#eaf1fb] p-7">
-              <div className="h-40 rounded-[18px] bg-[#cfdcf3]" />
-              <h3 className="mt-6 text-2xl font-bold leading-tight text-[#1f3b77]">
-                Revenus fonciers
-              </h3>
-              <ul className="mt-4 space-y-2 text-lg leading-8 text-slate-700">
-                <li>• Imposition selon votre situation</li>
-                <li>• Prélèvements sociaux</li>
-                <li>• Étude du régime applicable</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[24px] bg-[#eaf1fb] p-7">
-              <div className="h-40 rounded-[18px] bg-[#cfdcf3]" />
-              <h3 className="mt-6 text-2xl font-bold leading-tight text-[#1f3b77]">
-                Plus-values
-              </h3>
-              <ul className="mt-4 space-y-2 text-lg leading-8 text-slate-700">
-                <li>• Revente des parts</li>
-                <li>• Durée de détention à considérer</li>
-                <li>• Règles applicables au moment de la cession</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[24px] bg-[#eaf1fb] p-7">
-              <div className="h-40 rounded-[18px] bg-[#cfdcf3]" />
-              <h3 className="mt-6 text-2xl font-bold leading-tight text-[#1f3b77]">
-                Structuration
-              </h3>
-              <ul className="mt-4 space-y-2 text-lg leading-8 text-slate-700">
-                <li>• Assurance-vie</li>
-                <li>• Démembrement</li>
-                <li>• SCPI européennes</li>
-              </ul>
-            </div>
+            {["Revenus fonciers", "Plus-values", "Structuration"].map((title) => (
+              <div key={title} className="rounded-[24px] bg-[#eaf1fb] p-6 sm:p-7">
+                <div className="h-32 rounded-[18px] bg-[#cfdcf3] sm:h-40" />
+                <h3 className="mt-6 text-2xl font-bold leading-tight text-[#1f3b77]">
+                  {title}
+                </h3>
+                <ul className="mt-4 space-y-2 text-base leading-8 text-slate-700 sm:text-lg">
+                  {title === "Revenus fonciers" && (
+                    <>
+                      <li>• Imposition selon votre situation</li>
+                      <li>• Prélèvements sociaux</li>
+                      <li>• Étude du régime applicable</li>
+                    </>
+                  )}
+                  {title === "Plus-values" && (
+                    <>
+                      <li>• Revente des parts</li>
+                      <li>• Durée de détention à considérer</li>
+                      <li>• Règles applicables au moment de la cession</li>
+                    </>
+                  )}
+                  {title === "Structuration" && (
+                    <>
+                      <li>• Assurance-vie</li>
+                      <li>• Démembrement</li>
+                      <li>• SCPI européennes</li>
+                    </>
+                  )}
+                </ul>
+              </div>
+            ))}
           </div>
         </Container>
       </Section>
 
       <Section tone="cream">
-        <Container className="py-16 sm:py-20">
+        <Container className="py-12 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
             <div>
               <Title accent="avantages fiscaux">
                 Quels sont les avantages fiscaux des SCPI ?
               </Title>
 
-              <p className="mt-8 max-w-4xl text-lg leading-9 text-slate-700 sm:text-xl">
+              <p className="mt-6 max-w-4xl text-base leading-8 text-slate-700 sm:mt-8 sm:text-xl sm:leading-9">
                 Selon la SCPI choisie et le mode de détention, l’investisseur peut
                 rechercher une meilleure maîtrise de son imposition, notamment via
                 l’assurance-vie, certaines SCPI investies à l’étranger ou des montages
@@ -586,13 +583,13 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="rounded-[28px] bg-[#1f3b77] p-8 text-white shadow-[0_18px_40px_rgba(31,59,119,0.18)]">
-              <h3 className="text-3xl font-bold leading-tight">
+            <div className="rounded-[24px] bg-[#1f3b77] p-6 text-white shadow-[0_18px_40px_rgba(31,59,119,0.18)] sm:p-8">
+              <h3 className="text-2xl font-bold leading-tight sm:text-3xl">
                 Fiscalité des SCPI : étudiez votre situation avant d’investir.
               </h3>
               <Link
                 href="/fiscalite"
-                className="mt-8 inline-block rounded-full bg-[#f5c455] px-7 py-4 text-lg font-bold text-[#1f3b77]"
+                className="mt-8 inline-block rounded-full bg-[#f5c455] px-7 py-4 text-base font-bold text-[#1f3b77] sm:text-lg"
               >
                 Voir la page fiscalité →
               </Link>
@@ -609,7 +606,7 @@ export default function Home() {
               </p>
               <Link
                 href="/fiscalite"
-                className="mt-8 inline-block rounded-full bg-[#4d7fd6] px-7 py-4 text-lg font-bold text-white"
+                className="mt-8 inline-block rounded-full bg-[#4d7fd6] px-7 py-4 text-base font-bold text-white sm:text-lg"
               >
                 En savoir plus →
               </Link>
@@ -623,7 +620,7 @@ export default function Home() {
               </p>
               <Link
                 href="/guide-pdf"
-                className="mt-8 inline-block rounded-full bg-[#4d7fd6] px-7 py-4 text-lg font-bold text-white"
+                className="mt-8 inline-block rounded-full bg-[#4d7fd6] px-7 py-4 text-base font-bold text-white sm:text-lg"
               >
                 En savoir plus →
               </Link>
@@ -633,15 +630,15 @@ export default function Home() {
       </Section>
 
       <Section tone="white">
-        <Container className="py-16 sm:py-20">
+        <Container className="py-12 sm:py-20">
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr] lg:items-center">
-            <div className="rounded-[28px] bg-[#f8f0df] p-10">
-              <h2 className="text-4xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-5xl">
+            <div className="rounded-[24px] bg-[#f8f0df] p-6 sm:p-10">
+              <h2 className="text-3xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-5xl">
                 Différence entre <span className="text-[#f5c455]">SCPI</span> et achat
                 immobilier en direct
               </h2>
 
-              <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
+              <div className="mt-6 space-y-5 text-base leading-8 text-slate-700 sm:mt-8 sm:text-xl sm:leading-9">
                 <p>
                   La SCPI ne doit pas être confondue avec l’achat d’un bien immobilier
                   détenu en propre. Dans un cas, l’investisseur détient des parts d’une
@@ -658,14 +655,14 @@ export default function Home() {
 
               <Link
                 href="/comparaison"
-                className="mt-8 inline-block rounded-full bg-[#f5c455] px-7 py-4 text-lg font-bold text-[#1f3b77]"
+                className="mt-8 inline-block rounded-full bg-[#f5c455] px-7 py-4 text-base font-bold text-[#1f3b77] sm:text-lg"
               >
                 En savoir plus
               </Link>
             </div>
 
-            <div className="flex min-h-[340px] items-center justify-center rounded-[28px] bg-[#f8f0df]">
-              <div className="max-w-[280px] text-center text-3xl font-bold leading-tight text-[#1f3b77]">
+            <div className="flex min-h-[260px] items-center justify-center rounded-[24px] bg-[#f8f0df] p-6 sm:min-h-[340px]">
+              <div className="max-w-[280px] text-center text-2xl font-bold leading-tight text-[#1f3b77] sm:text-3xl">
                 Comparer avant d’investir permet de mieux choisir sa SCPI.
               </div>
             </div>
@@ -674,46 +671,37 @@ export default function Home() {
       </Section>
 
       <Section tone="white">
-        <Container className="pb-20">
+        <Container className="pb-16 sm:pb-20">
           <Title accent="Comment">Comment aller plus loin ?</Title>
 
           <div className="mt-8 grid gap-6 md:grid-cols-3">
-            <div className="rounded-[24px] border border-slate-200 bg-white p-7 shadow-[0_10px_25px_rgba(15,23,42,0.05)]">
+            <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.05)] sm:p-7">
               <h3 className="text-2xl font-bold text-[#1f3b77]">Guide PDF</h3>
-              <p className="mt-4 text-lg leading-8 text-slate-700">
+              <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg">
                 Une synthèse claire pour comprendre rapidement le fonctionnement des SCPI.
               </p>
-              <Link
-                href="/guide-pdf"
-                className="mt-6 inline-block font-semibold text-[#4d7fd6]"
-              >
+              <Link href="/guide-pdf" className="mt-6 inline-block font-semibold text-[#4d7fd6]">
                 Télécharger →
               </Link>
             </div>
 
-            <div className="rounded-[24px] border border-slate-200 bg-white p-7 shadow-[0_10px_25px_rgba(15,23,42,0.05)]">
+            <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.05)] sm:p-7">
               <h3 className="text-2xl font-bold text-[#1f3b77]">Comparateur</h3>
-              <p className="mt-4 text-lg leading-8 text-slate-700">
+              <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg">
                 Un outil pour comparer plusieurs SCPI à partir de critères concrets.
               </p>
-              <Link
-                href="/comparaison"
-                className="mt-6 inline-block font-semibold text-[#4d7fd6]"
-              >
+              <Link href="/comparaison" className="mt-6 inline-block font-semibold text-[#4d7fd6]">
                 Comparer →
               </Link>
             </div>
 
-            <div className="rounded-[24px] border border-slate-200 bg-white p-7 shadow-[0_10px_25px_rgba(15,23,42,0.05)]">
+            <div className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-[0_10px_25px_rgba(15,23,42,0.05)] sm:p-7">
               <h3 className="text-2xl font-bold text-[#1f3b77]">Simulation à crédit</h3>
-              <p className="mt-4 text-lg leading-8 text-slate-700">
+              <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg">
                 Estimez l’effort d’épargne et les revenus potentiels dans une logique de
                 financement à crédit.
               </p>
-              <Link
-                href="/scpi-credit"
-                className="mt-6 inline-block font-semibold text-[#4d7fd6]"
-              >
+              <Link href="/scpi-credit" className="mt-6 inline-block font-semibold text-[#4d7fd6]">
                 Simuler →
               </Link>
             </div>

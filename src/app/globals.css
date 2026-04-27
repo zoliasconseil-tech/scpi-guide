@@ -332,3 +332,10 @@ td {
     padding: 48px 0;
   }
 }
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
