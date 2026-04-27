@@ -201,72 +201,90 @@ export default function Home() {
   return (
     <>
       <Section tone="blue" className="relative overflow-hidden">
-        <div className="absolute inset-x-0 bottom-0 h-24 bg-white [clip-path:polygon(0_35%,100%_0,100%_100%,0_100%)]" />
-        <Container className="relative z-10 py-12 sm:py-20">
-          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div>
-              <Title accent="Qu’est-ce qu’une SCPI ?">Qu’est-ce qu’une SCPI ?</Title>
+  <div className="absolute inset-x-0 bottom-0 h-24 bg-white [clip-path:polygon(0_35%,100%_0,100%_100%,0_100%)]" />
 
-              <div className="mt-6 space-y-5 text-base leading-8 text-slate-700 sm:mt-8 sm:text-xl sm:leading-9">
-                <p>
-                  Une <strong className="text-[#1f3b77]">SCPI</strong> (Société Civile de
-                  Placement Immobilier) est une solution d’investissement immobilier
-                  collectif. Au lieu d’acheter seul un bien, l’épargnant acquiert des
-                  parts dans une société qui détient et gère un parc immobilier.
-                </p>
+  <Container className="relative z-10 py-12 sm:py-20">
+    <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+      <div>
+        <h1 className="text-4xl font-bold leading-tight tracking-tight text-[#1f3b77] sm:text-5xl lg:text-6xl">
+          Investir en <span className="text-[#4d7fd6]">SCPI</span> : comprendre, comparer et choisir
+        </h1>
 
-                <p>
-                  Les immeubles peuvent être composés de bureaux, commerces, actifs de
-                  santé, logistique ou encore immobilier européen. Les loyers perçus sont
-                  redistribués aux associés, généralement sous forme de revenus
-                  périodiques.
-                </p>
+        <p className="mt-6 text-lg leading-8 text-slate-700 sm:text-xl sm:leading-9">
+          Découvrez comment fonctionnent les SCPI, leurs avantages, leur fiscalité,
+          leurs risques et les critères essentiels avant d’investir.
+        </p>
 
-                <p>
-                  La SCPI permet ainsi de mutualiser le risque locatif, d’accéder plus
-                  facilement à l’immobilier et de déléguer totalement la gestion à une
-                  société spécialisée.
-                </p>
-              </div>
-            </div>
+        <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Link
+            href="/guide-pdf"
+            className="rounded-full bg-[#1f3b77] px-7 py-4 text-center text-lg font-bold text-white transition hover:opacity-95"
+          >
+            Télécharger le guide gratuit
+          </Link>
 
-            <div className="rounded-[28px] bg-[#1f3b77] p-6 text-white shadow-[0_18px_40px_rgba(31,59,119,0.25)] sm:rounded-[32px] sm:p-10">
-              <div className="mx-auto mb-6 h-6 w-16 rounded-full bg-[#f5c455]" />
-              <h3 className="text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
-                Comment allez-vous investir en SCPI ?
-              </h3>
+          <Link
+            href="/comparaison"
+            className="rounded-full border border-[#1f3b77]/20 bg-white px-7 py-4 text-center text-lg font-bold text-[#1f3b77] transition hover:bg-white/80"
+          >
+            Comparer les SCPI
+          </Link>
+        </div>
 
-              <p className="mt-6 text-center text-xl font-semibold text-[#f5c455] sm:text-2xl">
-                Guide pédagogique + comparatif gratuit
-              </p>
+        <div className="mt-8 space-y-5 text-base leading-8 text-slate-700 sm:text-lg sm:leading-9">
+          <p>
+            Une <strong className="text-[#1f3b77]">SCPI</strong> (Société Civile de
+            Placement Immobilier) est une solution d’investissement immobilier collectif.
+            Elle permet d’acheter des parts d’une société qui détient et gère un parc
+            immobilier.
+          </p>
 
-              <p className="mt-4 text-center text-base leading-8 text-white/90 sm:text-lg">
-                Obtenez une vision claire de la fiscalité, des avantages, des critères de
-                choix et des points de vigilance avant d’investir.
-              </p>
+          <p>
+            Les loyers perçus peuvent être redistribués aux associés sous forme de
+            revenus périodiques, avec une gestion entièrement déléguée à une société
+            spécialisée.
+          </p>
+        </div>
+      </div>
 
-              <div className="mt-8 space-y-4">
-                <Link
-                  href="/guide-pdf"
-                  className="block rounded-full bg-[#f5c455] px-6 py-4 text-center text-lg font-bold text-[#1f3b77] transition hover:opacity-95 sm:text-xl"
-                >
-                  Télécharger le guide
-                </Link>
-                <Link
-                  href="/comparaison"
-                  className="block rounded-full border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10 sm:text-lg"
-                >
-                  Accéder au comparateur
-                </Link>
-              </div>
+      <div className="rounded-[28px] bg-[#1f3b77] p-6 text-white shadow-[0_18px_40px_rgba(31,59,119,0.25)] sm:rounded-[32px] sm:p-10">
+        <div className="mx-auto mb-6 h-6 w-16 rounded-full bg-[#f5c455]" />
 
-              <p className="mt-6 text-sm leading-7 text-white/70">
-                Contenu informatif, gratuit et sans jargon inutile.
-              </p>
-            </div>
-          </div>
-        </Container>
-      </Section>
+        <h2 className="text-center text-3xl font-bold leading-tight tracking-tight sm:text-4xl">
+          Guide SCPI gratuit
+        </h2>
+
+        <p className="mt-6 text-center text-xl font-semibold text-[#f5c455] sm:text-2xl">
+          Fiscalité, rendement, risques et comparaison
+        </p>
+
+        <p className="mt-4 text-center text-base leading-8 text-white/90 sm:text-lg">
+          Obtenez une vision claire des SCPI avant d’investir, sans jargon inutile.
+        </p>
+
+        <div className="mt-8 space-y-4">
+          <Link
+            href="/guide-pdf"
+            className="block rounded-full bg-[#f5c455] px-6 py-4 text-center text-lg font-bold text-[#1f3b77] transition hover:opacity-95 sm:text-xl"
+          >
+            Télécharger le guide
+          </Link>
+
+          <Link
+            href="/comparaison"
+            className="block rounded-full border border-white/20 px-6 py-4 text-center text-base font-semibold text-white transition hover:bg-white/10 sm:text-lg"
+          >
+            Accéder au comparateur
+          </Link>
+        </div>
+
+        <p className="mt-6 text-sm leading-7 text-white/70">
+          Contenu informatif, gratuit et sans jargon inutile.
+        </p>
+      </div>
+    </div>
+  </Container>
+</Section>
 
       <Section tone="white">
         <Container className="py-6 sm:py-8">
