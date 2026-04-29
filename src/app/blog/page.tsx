@@ -20,6 +20,12 @@ const articles = [
     excerpt:
       "Pourquoi certains investisseurs choisissent les SCPI à crédit, comment fonctionne l’effet de levier et quels critères analyser avant de se lancer.",
   },
+  {
+    slug: "scpi-en-assurance-vie",
+    title: "SCPI en assurance-vie : la combinaison gagnante pour optimiser votre fiscalité",
+    excerpt:
+      "Pourquoi loger ses SCPI dans une assurance-vie peut transformer la fiscalité des revenus, faciliter la transmission et améliorer la liquidité — avec les limites à connaître.",
+  },
 ];
 
 export default function BlogPage() {
