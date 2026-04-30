@@ -76,6 +76,27 @@ const faqItems = [
     answer:
       "Une SCPI de rendement vise à distribuer des revenus réguliers issus de loyers d'actifs professionnels (bureaux, commerces, logistique). Son objectif principal est d'optimiser le taux de distribution. Une SCPI fiscale, en revanche, est construite autour d'un dispositif de défiscalisation (Pinel, Malraux, Déficit foncier) et vise à réduire l'impôt de l'investisseur. Ses revenus locatifs sont généralement plus faibles et sa durée de détention est contrainte. Pour un investisseur cherchant avant tout des revenus complémentaires et une diversification patrimoniale dans une logique de pierre-papier bénéfices, les SCPI de rendement sont généralement plus adaptées.",
   },
+  {
+    question:
+      "Quels sont les frais d'une SCPI et quel est leur impact sur le rendement ?",
+    answer:
+      "Les frais d'une SCPI se répartissent en deux catégories principales. Les frais de souscription (ou d'entrée), compris entre 8 % et 12 % du montant investi selon les SCPI, sont prélevés lors de l'acquisition des parts. Les frais de gestion annuels, compris entre 8 % et 12 % des loyers encaissés, sont déduits avant distribution aux associés — le rendement affiché est donc un rendement net de frais de gestion. En raison des frais d'entrée, il est essentiel de raisonner sur un horizon long terme (8 à 10 ans minimum) pour les amortir et bénéficier pleinement du potentiel de rendement de la SCPI.",
+  },
+  {
+    question: "Sur quel horizon de temps faut-il investir en SCPI ?",
+    answer:
+      "Les SCPI sont des placements conçus pour un horizon long terme, généralement recommandé entre 8 et 10 ans minimum. Cette durée permet d'amortir les frais d'entrée (8 à 12 % en moyenne) et de lisser les éventuelles variations du marché immobilier. Un investissement trop court expose l'investisseur à récupérer moins que son capital initial après imputation des frais de cession et d'une éventuelle baisse du prix de part. Sur le long terme, la combinaison des revenus potentiels distribués et d'une éventuelle revalorisation des parts peut constituer un rendement global intéressant, sous réserve des conditions de marché et des performances de la SCPI choisie.",
+  },
+  {
+    question: "Y a-t-il un risque de perte en capital avec les SCPI ?",
+    answer:
+      "Oui, et ce risque doit être clairement intégré dans l'analyse. Le prix de la part peut baisser si la valeur des actifs immobiliers détenus se déprécie — en cas de retournement du marché, de hausse des taux d'intérêt ou de forte vacance locative. Les distributions peuvent également être réduites ou suspendues en cas de difficultés locatives. Les performances passées, aussi solides soient-elles, ne garantissent jamais les résultats futurs. Il est donc recommandé de ne jamais investir en SCPI des sommes dont on pourrait avoir besoin à court terme.",
+  },
+  {
+    question: "Comment comparer et choisir entre plusieurs SCPI ?",
+    answer:
+      "Plusieurs indicateurs permettent une comparaison objective : le Taux de Distribution (TD) sur les dernières années, le Taux d'Occupation Financier (TOF), l'écart entre le prix de souscription et la valeur de reconstitution, la stratégie géographique et sectorielle (SCPI françaises, européennes, thématiques), la taille du portefeuille et la solidité de la société de gestion. Il est recommandé de ne pas se focaliser uniquement sur le TD, qui peut être gonflé par des éléments exceptionnels. Comparer plusieurs SCPI sur l'ensemble de ces critères permet une décision plus éclairée.",
+  },
 ];
 
 const jsonLd = {
@@ -873,6 +894,383 @@ export default function AvantagesPage() {
               collecte. Cette lisibilité comparative est un avantage réel de la
               pierre-papier bénéfices par rapport à l'immobilier direct, dont
               la valorisation est moins transparente et moins standardisée.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION : RÉCAPITULATIF ── */}
+      <section className="section">
+        <div className="container-site">
+          <div className="content-block">
+            <h2
+              style={{
+                fontSize: "clamp(34px, 5vw, 58px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.03em",
+                fontWeight: 800,
+                color: "var(--primary)",
+                marginBottom: 24,
+              }}
+            >
+              Les avantages des SCPI en résumé : ce qu'il faut retenir avant d'investir
+            </h2>
+
+            <p className="text-[18px] leading-8 text-slate-700">
+              Pour synthétiser, voici les dix points essentiels à retenir sur
+              les avantages d'un investissement en SCPI. Ces éléments
+              constituent la base de toute analyse sérieuse de ce placement
+              immobilier, et doivent toujours être mis en perspective avec les
+              risques inhérents à tout investissement, notamment le risque de
+              perte en capital que nous détaillons dans la section suivante.
+            </p>
+
+            <ul className="mt-6 list-disc pl-7 text-[18px] leading-8 text-slate-700">
+              <li className="mb-3">
+                <strong>Diversification immédiate :</strong> accès à un
+                portefeuille de dizaines ou centaines d'actifs professionnels
+                avec un seul investissement, réduisant la dépendance à un seul
+                bien ou à un seul locataire.
+              </li>
+              <li className="mb-3">
+                <strong>Gestion entièrement déléguée :</strong> aucune
+                contrainte opérationnelle pour l'investisseur, qui confie
+                l'intégralité de la gestion à une société de gestion agréée
+                par l'AMF — acquisition, baux, travaux, recouvrement, reporting.
+              </li>
+              <li className="mb-3">
+                <strong>Ticket d'entrée progressif :</strong> possibilité
+                d'investir à partir de quelques centaines ou milliers d'euros,
+                bien en deçà du coût d'un bien immobilier physique, avec la
+                possibilité d'augmenter son exposition par souscriptions
+                successives.
+              </li>
+              <li className="mb-3">
+                <strong>Revenus potentiels réguliers :</strong> distributions
+                trimestrielles ou mensuelles issues des loyers encaissés, selon
+                les performances de la SCPI et les conditions de marché — sans
+                garantie de montant ni de régularité.
+              </li>
+              <li className="mb-3">
+                <strong>Protection partielle contre l'inflation :</strong>{" "}
+                indexation des baux commerciaux sur l'ILC ou l'ILAT, permettant
+                aux loyers de suivre partiellement l'évolution des prix.
+              </li>
+              <li className="mb-3">
+                <strong>Liquidité relative :</strong> revente de parts
+                généralement plus accessible qu'un bien immobilier physique,
+                même si aucune liquidité immédiate n'est garantie.
+              </li>
+              <li className="mb-3">
+                <strong>Expertise institutionnelle :</strong> sélection
+                rigoureuse des actifs, due diligence approfondie, arbitrages
+                stratégiques réalisés par des professionnels — pour un
+                investissement individuel accessible.
+              </li>
+              <li className="mb-3">
+                <strong>Outil de transmission patrimoniale :</strong>{" "}
+                démembrement de propriété, donation de parts, intégration dans
+                une SCI ou dans un contrat d'assurance-vie ou de
+                capitalisation.
+              </li>
+              <li className="mb-3">
+                <strong>Souplesse d'entrée et de sortie :</strong> souscription
+                rapide, parfois entièrement en ligne, et cession partielle
+                possible selon les conditions du marché.
+              </li>
+              <li className="mb-3">
+                <strong>Lisibilité comparative :</strong> documentation
+                standardisée — DIC, rapports trimestriels, comptes annuels —
+                permettant une comparaison structurée entre différentes SCPI.
+              </li>
+            </ul>
+
+            <p className="mt-6 text-[18px] leading-8 text-slate-700">
+              Pour approfondir chaque dimension de cet investissement, consultez
+              nos pages dédiées :{" "}
+              <Link
+                href="/fiscalite"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                fiscalité des SCPI
+              </Link>
+              ,{" "}
+              <Link
+                href="/revente"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                comment revendre ses parts
+              </Link>
+              ,{" "}
+              <Link
+                href="/scpi-credit"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                investir en SCPI à crédit
+              </Link>{" "}
+              ou encore notre{" "}
+              <Link
+                href="/comparaison"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                outil de comparaison gratuit
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION : SCPI VS IMMOBILIER DIRECT ── */}
+      <section className="section-tight">
+        <div className="container-site grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
+          <div className="content-block">
+            <h2
+              style={{
+                fontSize: "clamp(34px, 5vw, 58px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.03em",
+                fontWeight: 800,
+                color: "var(--primary)",
+                marginBottom: 24,
+              }}
+            >
+              SCPI vs immobilier locatif en direct : les principales différences
+            </h2>
+
+            <p className="text-[18px] leading-8 text-slate-700">
+              L'un des arbitrages patrimoniaux les plus fréquents est celui entre
+              l'investissement en SCPI et l'achat d'un bien immobilier locatif
+              en direct. Ces deux approches présentent des profils très différents
+              en termes de gestion, de ticket d'entrée, de diversification et de
+              liquidité. Voici les principales différences à connaître pour faire
+              un choix éclairé.
+            </p>
+
+            <ul className="mt-6 list-disc pl-7 text-[18px] leading-8 text-slate-700">
+              <li className="mb-3">
+                <strong>Ticket d'entrée :</strong> l'immobilier direct requiert
+                généralement plusieurs dizaines de milliers d'euros d'apport,
+                contre quelques centaines ou milliers d'euros pour une SCPI.
+              </li>
+              <li className="mb-3">
+                <strong>Gestion :</strong> l'immobilier direct implique de gérer
+                soi-même (ou via une agence) les locataires, les travaux et la
+                comptabilité. La SCPI délègue tout à la société de gestion.
+              </li>
+              <li className="mb-3">
+                <strong>Diversification :</strong> un bien en direct expose
+                l'investisseur à un seul actif et un seul locataire. La SCPI
+                mutualise le risque sur des dizaines ou centaines d'actifs.
+              </li>
+              <li className="mb-3">
+                <strong>Liquidité :</strong> revendre un appartement peut prendre
+                plusieurs mois et nécessite un notaire. Les parts de SCPI peuvent
+                être cédées plus rapidement, même si la liquidité n'est jamais
+                garantie. Consultez notre page{" "}
+                <Link
+                  href="/revente"
+                  className="font-semibold text-[var(--primary)] underline underline-offset-2"
+                >
+                  revente des parts
+                </Link>{" "}
+                pour comprendre les mécanismes.
+              </li>
+              <li className="mb-3">
+                <strong>Frais :</strong> l'immobilier direct génère des frais de
+                notaire (7 à 8 % dans l'ancien), des charges de copropriété et
+                des travaux. La SCPI a des frais de souscription (8 à 12 %) et
+                des frais de gestion annuels déduits avant distribution.
+              </li>
+              <li className="mb-3">
+                <strong>Fiscalité :</strong> dans les deux cas, les revenus
+                fonciers sont soumis à l'IR et aux prélèvements sociaux. Mais la
+                SCPI offre davantage de schémas d'optimisation : assurance-vie,
+                démembrement, revenus européens. Consultez notre page{" "}
+                <Link
+                  href="/fiscalite"
+                  className="font-semibold text-[var(--primary)] underline underline-offset-2"
+                >
+                  fiscalité des SCPI
+                </Link>{" "}
+                pour les détails.
+              </li>
+              <li className="mb-3">
+                <strong>Horizon de placement :</strong> les deux requièrent un
+                horizon long terme. La SCPI recommande généralement 8 à 10 ans
+                minimum pour amortir les frais d'entrée. Il est également
+                possible d'investir{" "}
+                <Link
+                  href="/scpi-credit"
+                  className="font-semibold text-[var(--primary)] underline underline-offset-2"
+                >
+                  en SCPI à crédit
+                </Link>{" "}
+                pour amplifier l'effet de levier.
+              </li>
+            </ul>
+
+            <p className="mt-6 text-[18px] leading-8 text-slate-700">
+              Ni l'immobilier direct, ni la SCPI n'est universellement supérieur :
+              le meilleur choix dépend du profil de l'investisseur, de ses
+              objectifs patrimoniaux, de sa capacité à gérer des contraintes
+              opérationnelles et de son horizon de placement. Utilisez notre{" "}
+              <Link
+                href="/comparaison"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                outil de comparaison
+              </Link>{" "}
+              pour analyser les SCPI disponibles.
+            </p>
+          </div>
+
+          <div
+            className="card"
+            style={{
+              background: "#f3ecd8",
+              borderColor: "#f3ecd8",
+              borderRadius: 28,
+              padding: 40,
+            }}
+          >
+            <h3
+              style={{
+                color: "var(--primary)",
+                fontSize: "clamp(26px, 3vw, 40px)",
+                lineHeight: 1.15,
+                fontWeight: 800,
+                marginBottom: 24,
+              }}
+            >
+              Pour qui la SCPI est-elle plus adaptée ?
+            </h3>
+
+            <p className="text-[18px] leading-8 text-slate-700">
+              La SCPI convient particulièrement aux profils souhaitant investir
+              dans l'immobilier sans en subir les contraintes de gestion
+              quotidiennes : actifs manquant de temps, expatriés, investisseurs
+              souhaitant diversifier un patrimoine existant ou préparer leur
+              retraite avec un complément de revenus potentiels.
+            </p>
+
+            <p className="mt-6 text-[18px] leading-8 text-slate-700">
+              Elle est également adaptée aux investisseurs disposant d'un apport
+              limité qui souhaitent s'exposer à l'immobilier professionnel —
+              bureaux, commerces, logistique — difficile d'accès en direct pour
+              un particulier.
+            </p>
+
+            <p className="mt-6 text-[18px] leading-8 text-slate-700">
+              En revanche, l'immobilier direct peut être plus adapté à ceux qui
+              souhaitent un contrôle total sur leur bien, bénéficier d'un fort
+              effet de levier via le crédit, ou profiter de dispositifs de
+              défiscalisation sur des biens résidentiels (Pinel, Denormandie).
+              Aucune solution ne remplace une analyse personnalisée de la
+              situation patrimoniale.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION : RISQUES ET LIMITES ── */}
+      <section className="section" style={{ background: "#f3ecd8" }}>
+        <div className="container-site">
+          <div className="content-block">
+            <h2
+              style={{
+                fontSize: "clamp(34px, 5vw, 58px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.03em",
+                fontWeight: 800,
+                color: "var(--primary)",
+                marginBottom: 24,
+              }}
+            >
+              Quels sont les risques et les limites des SCPI ?
+            </h2>
+
+            <p className="text-[18px] leading-8 text-slate-700">
+              Présenter les avantages des SCPI sans évoquer leurs risques serait
+              incomplet et trompeur. Tout investissement immobilier comporte des
+              aléas, et les SCPI ne font pas exception. Voici les principaux
+              points de vigilance à intégrer impérativement dans votre analyse
+              avant d'investir.
+            </p>
+
+            <ul className="mt-6 list-disc pl-7 text-[18px] leading-8 text-slate-700">
+              <li className="mb-3">
+                <strong>Risque de perte en capital :</strong> le prix de la part
+                peut baisser si la valeur des actifs détenus par la SCPI se
+                déprécie — en cas de retournement du marché immobilier, de forte
+                hausse des taux d'intérêt ou de tension locative importante.
+                Les performances passées ne garantissent pas les performances
+                futures.
+              </li>
+              <li className="mb-3">
+                <strong>Risque locatif :</strong> une hausse de la vacance
+                locative ou des impayés peut réduire les revenus distribués. Le
+                Taux d'Occupation Financier (TOF) est l'indicateur clé à
+                surveiller pour évaluer ce risque avant d'investir.
+              </li>
+              <li className="mb-3">
+                <strong>Risque de liquidité :</strong> même si la cession de
+                parts est généralement plus simple qu'un bien en direct, elle
+                n'est jamais garantie — en particulier lors de tensions sur le
+                marché immobilier ou de collecte insuffisante. La{" "}
+                <Link
+                  href="/revente"
+                  className="font-semibold text-[var(--primary)] underline underline-offset-2"
+                >
+                  revente de parts de SCPI
+                </Link>{" "}
+                mérite d'être anticipée.
+              </li>
+              <li className="mb-3">
+                <strong>Frais d'entrée significatifs :</strong> avec des frais
+                de souscription de 8 à 12 % en moyenne, un investissement en
+                SCPI n'est pertinent que sur un horizon long terme (8 à 10 ans
+                minimum). Un désinvestissement prématuré est coûteux.
+              </li>
+              <li className="mb-3">
+                <strong>Risque de taux :</strong> en période de forte hausse des
+                taux d'intérêt, la valeur des actifs immobiliers peut se corriger,
+                entraînant une baisse potentielle du prix des parts, comme on l'a
+                observé sur plusieurs SCPI en 2023.
+              </li>
+              <li className="mb-3">
+                <strong>Revenus non garantis :</strong> les distributions sont
+                variables et peuvent être réduites, suspendues ou modifiées à
+                tout moment selon les performances du portefeuille et les décisions
+                de la société de gestion.
+              </li>
+              <li className="mb-3">
+                <strong>Risque de change :</strong> pour les SCPI investissant
+                hors zone euro (Royaume-Uni, pays nordiques, etc.), une évolution
+                défavorable des taux de change peut affecter les revenus
+                rapatriés et la valeur des actifs.
+              </li>
+            </ul>
+
+            <p className="mt-6 text-[18px] leading-8 text-slate-700">
+              Ces risques ne disqualifient pas les SCPI comme outil patrimonial,
+              mais ils soulignent l'importance d'une sélection rigoureuse, d'une
+              diversification entre plusieurs véhicules et d'un horizon de placement
+              adapté. Utilisez notre{" "}
+              <Link
+                href="/comparaison"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                outil de comparaison
+              </Link>{" "}
+              pour analyser les SCPI disponibles et{" "}
+              <Link
+                href="/guide-pdf"
+                className="font-semibold text-[var(--primary)] underline underline-offset-2"
+              >
+                téléchargez notre guide gratuit
+              </Link>{" "}
+              pour approfondir votre analyse avant d'investir.
             </p>
           </div>
         </div>
