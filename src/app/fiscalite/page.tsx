@@ -104,6 +104,62 @@ const faqSchema = {
         text: "Chaque société de gestion communique annuellement la valeur IFI par part, correspondant à la fraction représentative d'actifs immobiliers nets. Il suffit de multiplier ce montant par le nombre de parts au 1er janvier. En nue-propriété, les parts sont exclues de l'assiette IFI du nu-propriétaire.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Quelle fiscalité pour les SCPI quand on est fortement imposé ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Pour un investisseur avec une TMI de 41 % ou 45 %, la fiscalité des SCPI en direct peut être lourde (IR + 17,2 % de prélèvements sociaux). Des alternatives peuvent être envisagées selon la situation : SCPI en assurance-vie (fiscalité différée au rachat), démembrement de propriété (aucun revenu pendant la période), SCPI européennes (selon les conventions fiscales applicables) ou SCPI à crédit avec déduction des intérêts d'emprunt. Chaque solution comporte ses propres contraintes et risques. Un conseil patrimonial personnalisé est recommandé avant toute décision.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Les SCPI européennes sont-elles vraiment plus avantageuses fiscalement ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Les SCPI investissant hors de France peuvent, dans certains cas, bénéficier d'un traitement fiscal différent grâce aux conventions fiscales bilatérales. Les revenus de source étrangère ne sont souvent pas soumis aux prélèvements sociaux français de 17,2 %, ce qui peut représenter un avantage. Cependant, cela ne signifie pas l'absence totale d'impôt : une imposition peut subsister dans le pays source ou via le mécanisme du taux effectif en France. Le traitement exact dépend de chaque convention et de la situation individuelle. Il ne faut pas considérer que les SCPI européennes suppriment automatiquement toute fiscalité.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "SCPI en direct ou assurance-vie : quelle fiscalité choisir ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En direct, les revenus fonciers SCPI sont imposés chaque année au barème IR + prélèvements sociaux 17,2 %. En assurance-vie, les revenus sont capitalisés sans imposition annuelle, et la fiscalité s'applique uniquement lors des rachats, avec des abattements après 8 ans (4 600 € / 9 200 €) et un taux réduit à 7,5 % sous 150 000 € de primes. L'assurance-vie est généralement plus intéressante pour les TMI élevées et les longues durées, mais les frais du contrat s'ajoutent aux frais propres des SCPI. Le meilleur choix dépend de votre situation fiscale, de votre horizon et de votre besoin de revenus immédiats.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Peut-on réduire l'impôt avec des SCPI à crédit ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui, dans certaines conditions. En régime réel, les intérêts d'emprunt sont déductibles des revenus fonciers SCPI, ce qui réduit la base imposable. Pour une TMI à 41 %, chaque euro d'intérêts déduit économise 41 centimes d'IR + 17,2 centimes de prélèvements sociaux. En cas de déficit foncier, celui-ci peut s'imputer sur d'autres revenus fonciers ou sur le revenu global dans la limite de 10 700 € par an. L'investissement à crédit n'est pas sans risque : la valeur des parts peut baisser et les revenus ne sont jamais garantis.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Les revenus de SCPI sont-ils garantis ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Non. Les revenus distribués par les SCPI (loyers, dividendes) ne sont jamais garantis. Ils dépendent des loyers effectivement encaissés, du taux d'occupation des immeubles, de la politique de distribution de la société de gestion et des conditions de marché. Les performances passées ne préjugent pas des performances futures. La valeur des parts peut également baisser, entraînant un risque de perte en capital.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Comment réduire l'impôt sur les SCPI ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Plusieurs pistes peuvent, selon la situation, réduire la fiscalité des SCPI : (1) la détention en assurance-vie diffère l'imposition au moment des rachats ; (2) le démembrement de propriété supprime l'imposition annuelle pendant la période ; (3) les SCPI européennes peuvent, dans certains cas, éviter les prélèvements sociaux français de 17,2 % grâce aux conventions fiscales ; (4) le financement à crédit permet de déduire les intérêts d'emprunt en régime réel ; (5) le régime réel peut être plus avantageux que le micro-foncier si les charges sont significatives. Aucune de ces solutions ne supprime totalement l'impôt et chacune comporte ses propres risques. Un conseil patrimonial personnalisé est indispensable.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Quel rendement net peut-on espérer avec une SCPI ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Le rendement net dépend du taux de distribution brut affiché par la SCPI, de votre TMI, de votre mode de détention et des prélèvements sociaux. À titre indicatif, un rendement brut de 5 % peut descendre à environ 3,1 % net pour une TMI à 30 % (en micro-foncier), ou à environ 2,6 % net sans abattement. En assurance-vie, l'absence d'imposition annuelle peut préserver le rendement net à court terme. Ces chiffres sont purement indicatifs : les revenus ne sont jamais garantis, les performances passées ne préjugent pas des performances futures, et un risque de perte en capital existe.",
+      },
+    },
   ],
 };
 
@@ -287,6 +343,12 @@ export default function FiscalitePage() {
                 <span className="text-[#4d7fd6]">Fiscalité des SCPI</span> en
                 2026 : guide complet et indépendant
               </h1>
+
+              <p className="mt-5 rounded-[16px] border-l-4 border-[#4d7fd6] bg-[#eaf1fb] px-5 py-4 text-lg font-semibold leading-8 text-[#1f3b77] sm:text-xl">
+                La fiscalité des SCPI peut réduire fortement le rendement brut
+                selon votre situation — comprendre vos obligations fiscales
+                est une étape indispensable avant tout investissement.
+              </p>
 
               <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
                 <p>
@@ -700,6 +762,24 @@ export default function FiscalitePage() {
 
           <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
             <p>
+              En détention directe, un investisseur situé dans une{" "}
+              <strong className="text-[#1f3b77]">
+                tranche marginale d'imposition (TMI) de 30 %
+              </strong>{" "}
+              peut supporter une fiscalité globale proche de{" "}
+              <strong className="text-[#1f3b77]">47,2 %</strong> sur ses
+              revenus fonciers SCPI — soit 30 % d'impôt sur le revenu et
+              17,2 % de prélèvements sociaux. Ainsi, un{" "}
+              <strong className="text-[#1f3b77]">rendement brut de 5 %</strong>{" "}
+              peut être réduit à environ{" "}
+              <strong className="text-[#1f3b77]">2,6 % net</strong> dans cette
+              hypothèse. Ce calcul est volontairement simplifié (il ne prend
+              pas en compte l'abattement micro-foncier ni les charges
+              déductibles) et ne remplace pas une analyse fiscale personnalisée :
+              la situation réelle dépend de chaque investisseur.
+            </p>
+
+            <p>
               <strong className="text-[#1f3b77]">Important :</strong> ces
               chiffres sont indicatifs et supposent un régime micro-foncier,
               des revenus 100 % fonciers et aucune charge déductible. Ils
@@ -730,6 +810,96 @@ export default function FiscalitePage() {
               </Link>
               .
             </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── BLOC : Cas pratique simplifié ── */}
+      <Section tone="cream">
+        <Container className="py-16 sm:py-20">
+          <Title accent="Cas pratique simplifié">
+            Cas pratique simplifié : fiscalité des SCPI en détention directe
+          </Title>
+
+          <p className="mt-6 text-lg leading-9 text-slate-700 sm:text-xl">
+            Pour illustrer concrètement l'impact de la{" "}
+            <strong className="text-[#1f3b77]">fiscalité des SCPI</strong>,
+            voici un exemple pédagogique basé sur une détention en direct avec
+            des revenus fonciers majoritaires. Ce cas simplifié ne tient pas
+            compte des abattements, des charges déductibles en régime réel, des
+            conventions fiscales applicables aux SCPI européennes ni de la
+            situation personnelle de chaque investisseur.
+          </p>
+
+          <div className="mt-10 rounded-[28px] bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)] sm:p-10">
+            <div className="space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
+              <p>
+                Un investisseur percevant{" "}
+                <strong className="text-[#1f3b77]">
+                  10 000 € de revenus SCPI
+                </strong>{" "}
+                en détention directe et situé dans une{" "}
+                <strong className="text-[#1f3b77]">TMI de 30 %</strong> peut
+                supporter environ{" "}
+                <strong className="text-[#1f3b77]">
+                  4 720 € de fiscalité théorique
+                </strong>{" "}
+                (30 % d'IR + 17,2 % de prélèvements sociaux SCPI = 47,2 % ×
+                10 000 €), hors cas particuliers. Son revenu net fiscal
+                théorique serait alors proche de{" "}
+                <strong className="text-[#1f3b77]">5 280 €</strong>.
+              </p>
+
+              <div className="overflow-x-auto rounded-[20px] border border-slate-200">
+                <table className="min-w-full text-left">
+                  <tbody className="text-slate-700">
+                    <tr className="border-b border-slate-200 bg-[#eaf1fb]">
+                      <td className="px-6 py-4 font-semibold text-[#1f3b77]">
+                        Revenus SCPI bruts
+                      </td>
+                      <td className="px-6 py-4 font-semibold">10 000 €</td>
+                    </tr>
+                    <tr className="border-b border-slate-200">
+                      <td className="px-6 py-4 text-slate-700">
+                        Impôt sur le revenu (TMI 30 %)
+                      </td>
+                      <td className="px-6 py-4 text-slate-700">– 3 000 €</td>
+                    </tr>
+                    <tr className="border-b border-slate-200">
+                      <td className="px-6 py-4 text-slate-700">
+                        Prélèvements sociaux (17,2 %)
+                      </td>
+                      <td className="px-6 py-4 text-slate-700">– 1 720 €</td>
+                    </tr>
+                    <tr className="bg-[#eaf1fb]">
+                      <td className="px-6 py-4 font-bold text-[#1f3b77]">
+                        Revenu net théorique
+                      </td>
+                      <td className="px-6 py-4 font-bold text-[#1f3b77]">
+                        ≈ 5 280 €
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="text-base italic text-slate-500">
+                Ce calcul est volontairement simplifié et ne remplace pas une
+                analyse fiscale personnalisée. Il ne tient pas compte de
+                l'abattement micro-foncier (30 %), des charges déductibles en
+                régime réel, des conventions fiscales applicables selon les pays
+                (SCPI européennes), ni de la situation spécifique de chaque
+                investisseur. Les revenus et performances ne sont jamais
+                garantis. Un risque de perte en capital existe. Consultez notre{" "}
+                <Link
+                  href="/guide-pdf"
+                  className="font-semibold text-[#1f3b77] underline underline-offset-2"
+                >
+                  guide SCPI gratuit
+                </Link>{" "}
+                pour aller plus loin.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
@@ -846,32 +1016,38 @@ export default function FiscalitePage() {
                 "Mode de détention",
                 "Fiscalité principale",
                 "Points d'attention",
+                "Profil concerné",
               ]}
               rows={[
                 [
                   "SCPI en direct",
                   "Revenus fonciers au barème IR + PS 17,2 %. Régime micro-foncier ou réel selon les revenus et charges.",
                   "Imposition annuelle systématique. Impact TMI important pour les tranches hautes.",
+                  "TMI modérée (≤ 30 %), revenus immédiats souhaités, faibles charges déductibles.",
                 ],
                 [
                   "SCPI via assurance-vie",
                   "Aucune imposition annuelle. Fiscalité différée au rachat (PFU ou barème, avec abattements après 8 ans).",
                   "Dépend des supports disponibles chez l'assureur. Les frais du contrat s'ajoutent aux frais SCPI.",
+                  "TMI élevée (41–45 %), horizon long (8 ans+), objectif transmission ou capitalisation.",
                 ],
                 [
                   "SCPI européennes (hors France)",
                   "IR français selon convention bilatérale (méthode d'exemption ou crédit d'impôt). Généralement sans PS 17,2 %.",
                   "Vérifier la convention applicable. Déclaration 2047 obligatoire. Toujours soumises à l'IFI.",
+                  "Investisseurs cherchant à réduire les prélèvements sociaux selon leur situation fiscale.",
                 ],
                 [
                   "SCPI en nue-propriété (démembrement)",
                   "0 € d'IR et 0 € de PS pendant le démembrement. Aucun revenu perçu. Hors assiette IFI.",
                   "Aucun revenu pendant la période. Prix d'achat décoté selon la durée. Horizon 5 à 15 ans.",
+                  "TMI élevée, sans besoin de revenus immédiats, logique de capitalisation patrimoniale à moyen terme.",
                 ],
                 [
                   "SCPI à crédit",
                   "Régime réel obligatoire. Intérêts d'emprunt déductibles des revenus fonciers. Possible déficit foncier.",
                   "Ne fonctionne que si le rendement SCPI excède le coût net du crédit. Risque de perte en capital.",
+                  "Capacité d'endettement disponible, TMI élevée, objectif constitution de patrimoine sans apport significatif.",
                 ],
               ]}
             />
@@ -895,6 +1071,147 @@ export default function FiscalitePage() {
             </Link>{" "}
             pour estimer l'effort d'épargne net selon votre TMI.
           </p>
+        </Container>
+      </Section>
+
+      {/* ── MINI GUIDE DÉCISIONNEL ── */}
+      <Section tone="white">
+        <Container className="py-16 sm:py-20">
+          <Title accent="guide décisionnel">
+            Mini guide décisionnel : quel mode de détention SCPI selon votre
+            situation ?
+          </Title>
+
+          <p className="mt-6 text-lg leading-9 text-slate-700 sm:text-xl">
+            Il n'existe pas de mode de détention universellement optimal. Le
+            choix dépend de votre{" "}
+            <strong className="text-[#1f3b77]">TMI</strong>, de votre horizon
+            de placement, de votre besoin de revenus immédiats et de vos
+            objectifs patrimoniaux. Ce guide synthétique vous aide à identifier
+            les pistes à explorer{" "}
+            <strong className="text-[#1f3b77]">
+              selon votre situation
+            </strong>{" "}
+            — sans se substituer à un conseil patrimonial personnalisé.
+          </p>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-[24px] border-2 border-[#4d7fd6] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#4d7fd6]">
+                TMI faible (≤ 30 %)
+              </p>
+              <p className="mt-4 text-lg font-bold text-[#1f3b77]">
+                Détention en direct possible
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                La détention en direct peut convenir selon votre situation : le
+                poids fiscal reste limité et le régime micro-foncier (abattement
+                30 %) simplifie la déclaration si les revenus annuels restent
+                inférieurs à 15 000 €. Revenus non garantis — risque de perte
+                en capital.
+              </p>
+            </div>
+
+            <div className="rounded-[24px] border-2 border-[#f5c455] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#b8940d]">
+                TMI élevée (41–45 %)
+              </p>
+              <p className="mt-4 text-lg font-bold text-[#1f3b77]">
+                Assurance-vie, SCPI européennes ou démembrement à étudier
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                La pression fiscale en direct peut dépasser 47–62 % des revenus.
+                Selon votre horizon et votre besoin de revenus, l'assurance-vie
+                (fiscalité différée), les SCPI européennes (conventions fiscales
+                selon les cas) ou le démembrement (aucune imposition pendant la
+                période) peuvent être plus adaptés. Chaque solution comporte ses
+                propres risques.
+              </p>
+            </div>
+
+            <div className="rounded-[24px] border-2 border-[#eaf1fb] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#4d7fd6]">
+                Objectif revenus immédiats
+              </p>
+              <p className="mt-4 text-lg font-bold text-[#1f3b77]">
+                Calculez le rendement net après impôts
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                Un rendement brut affiché de 5 % peut descendre à 2,5–3,5 %
+                net selon la TMI et le mode de détention. Intégrez toujours l'IR
+                et les prélèvements sociaux à 17,2 % dans votre calcul. Les
+                revenus ne sont pas garantis. Consultez nos{" "}
+                <Link
+                  href="/comparaison"
+                  className="font-semibold text-[#1f3b77] underline underline-offset-2"
+                >
+                  comparaisons de SCPI
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div className="rounded-[24px] border-2 border-[#eaf1fb] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#4d7fd6]">
+                Objectif transmission
+              </p>
+              <p className="mt-4 text-lg font-bold text-[#1f3b77]">
+                Démembrement ou assurance-vie possibles
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                Le démembrement peut réduire la valeur fiscale transmise.
+                L'assurance-vie offre un régime successoral spécifique (abattement
+                152 500 € par bénéficiaire pour les primes versées avant 70 ans).
+                Ces dispositifs sont complexes et requièrent un conseil notarial
+                ou patrimonial.
+              </p>
+            </div>
+
+            <div className="rounded-[24px] border-2 border-[#eaf1fb] bg-white p-7 shadow-[0_8px_24px_rgba(15,23,42,0.06)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#4d7fd6]">
+                Objectif financement
+              </p>
+              <p className="mt-4 text-lg font-bold text-[#1f3b77]">
+                SCPI à crédit à comparer avec soin
+              </p>
+              <p className="mt-3 text-base leading-7 text-slate-600">
+                En régime réel, les intérêts d'emprunt sont potentiellement
+                déductibles des revenus fonciers, ce qui peut réduire la base
+                imposable. L'effet de levier n'est positif que si le rendement
+                net SCPI excède le coût du crédit sur la durée. Risque de perte
+                en capital si la valeur des parts baisse. Utilisez notre{" "}
+                <Link
+                  href="/scpi-credit"
+                  className="font-semibold text-[#1f3b77] underline underline-offset-2"
+                >
+                  simulateur SCPI à crédit
+                </Link>
+                .
+              </p>
+            </div>
+
+            <div className="rounded-[24px] bg-[#1f3b77] p-7 text-white shadow-[0_8px_24px_rgba(31,59,119,0.18)]">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-[#f5c455]">
+                Dans tous les cas
+              </p>
+              <p className="mt-4 text-lg font-bold">
+                Pas de solution universelle
+              </p>
+              <p className="mt-3 text-base leading-7 text-white/90">
+                La fiscalité des SCPI dépend de votre TMI, de votre mode de
+                détention, des SCPI choisies et des conventions fiscales
+                applicables. Ce guide est pédagogique et ne remplace pas un
+                conseil fiscal ou patrimonial personnalisé. Les revenus ne sont
+                pas garantis. Un risque de perte en capital existe.
+              </p>
+              <Link
+                href="/guide-pdf"
+                className="mt-5 inline-block rounded-full bg-[#f5c455] px-5 py-3 text-sm font-bold text-[#1f3b77]"
+              >
+                Télécharger le guide gratuit
+              </Link>
+            </div>
+          </div>
         </Container>
       </Section>
 
@@ -1165,6 +1482,34 @@ export default function FiscalitePage() {
                   peuvent le réduire dans certains cas, selon la situation.
                 </li>
               </ul>
+
+              <p className="mt-5">
+                <strong>Pour aller plus loin — traitement expert :</strong>
+              </p>
+              <p className="mt-3">
+                Les SCPI investissant hors de France génèrent des{" "}
+                <strong>revenus de source étrangère</strong> dont le traitement
+                fiscal dépend des conventions fiscales internationales liant la
+                France à chaque pays de détention des actifs. Deux mécanismes
+                principaux s'appliquent selon les conventions : la{" "}
+                <strong>méthode d'exemption avec taux effectif</strong> (les
+                revenus étrangers sont exonérés d'IR en France, mais intégrés
+                dans le calcul du taux moyen applicable aux revenus français)
+                et la <strong>méthode du crédit d'impôt</strong> (les revenus
+                sont imposés en France, mais l'impôt acquitté à l'étranger
+                vient en déduction de l'IR français dû). Dans la plupart des
+                cas, ces revenus étrangers{" "}
+                <strong>
+                  ne sont pas soumis aux prélèvements sociaux français à
+                  17,2 %
+                </strong>
+                , ce qui peut constituer un avantage notable selon la TMI.
+                Cela ne signifie toutefois pas l'absence totale d'impôt : une
+                retenue à la source dans le pays d'origine ou une imposition
+                résiduelle via le taux effectif en France peuvent subsister.
+                Le traitement exact varie d'une convention à l'autre et selon
+                votre résidence fiscale.
+              </p>
             </BeigePanel>
 
             <div className="space-y-6">
@@ -1574,6 +1919,60 @@ export default function FiscalitePage() {
                 Vérifier la convention avant d'investir.
               </p>
             </InfoCard>
+
+            <InfoCard title="Ignorer sa tranche marginale">
+              <p>
+                Ne pas tenir compte de sa TMI avant d'investir en SCPI en
+                direct. Pour une TMI à 41 % ou 45 %, l'impôt SCPI peut
+                fortement réduire le rendement net. D'autres modes de détention
+                — assurance-vie, démembrement ou{" "}
+                <Link
+                  href="/scpi-credit"
+                  className="font-semibold text-[#1f3b77] underline underline-offset-2"
+                >
+                  investir en SCPI à crédit
+                </Link>{" "}
+                — peuvent, selon la situation, être plus adaptés.
+              </p>
+            </InfoCard>
+
+            <InfoCard title="Oublier les prélèvements sociaux">
+              <p>
+                Les prélèvements sociaux de 17,2 % s'appliquent aux revenus
+                fonciers SCPI en plus de l'IR, quelle que soit la TMI.
+                Omettre ce poste peut conduire à surestimer le rendement net
+                d'un à deux points par an selon le niveau de revenus — ce qui
+                fausse toute comparaison avec d'autres placements.
+              </p>
+            </InfoCard>
+
+            <InfoCard title="Ne pas comparer les modes de détention">
+              <p>
+                Investir en SCPI en direct sans avoir comparé les alternatives :
+                assurance-vie (fiscalité différée), démembrement (aucun revenu,
+                aucune imposition pendant la période), SCPI européennes
+                (conventions fiscales) et financement à crédit (intérêts
+                déductibles). Chaque profil fiscal mérite une analyse
+                personnalisée. Utilisez notre{" "}
+                <Link
+                  href="/comparaison"
+                  className="font-semibold text-[#1f3b77] underline underline-offset-2"
+                >
+                  outil pour comparer les SCPI
+                </Link>
+                .
+              </p>
+            </InfoCard>
+
+            <InfoCard title="Sous-estimer liquidité et risque en capital">
+              <p>
+                Les SCPI à capital variable peuvent suspendre ou retarder les
+                retraits en période de tension. La valeur des parts peut baisser
+                sous l'effet d'une réévaluation du patrimoine. Les revenus
+                distribués ne sont jamais garantis. Avant d'investir, intégrez
+                ces risques dans votre analyse, en complément de la fiscalité.
+              </p>
+            </InfoCard>
           </div>
         </Container>
       </Section>
@@ -1702,6 +2101,171 @@ export default function FiscalitePage() {
                     représentant la fraction immobilière nette du portefeuille.
                     En nue-propriété, les parts sont exclues de l'assiette IFI
                     du nu-propriétaire.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Quelle fiscalité pour les SCPI quand on est fortement
+                      imposé ?
+                    </strong>
+                  </p>
+                  <p>
+                    Pour une TMI à 41 % ou 45 %, la fiscalité des SCPI en
+                    direct peut être lourde (IR + 17,2 % de prélèvements
+                    sociaux). Selon votre situation, des alternatives peuvent
+                    être étudiées : SCPI en assurance-vie (fiscalité différée
+                    au rachat), démembrement de propriété (aucune imposition
+                    pendant la période), SCPI européennes (selon les conventions
+                    applicables) ou{" "}
+                    <Link
+                      href="/scpi-credit"
+                      className="font-semibold text-white underline underline-offset-2"
+                    >
+                      investir en SCPI à crédit
+                    </Link>{" "}
+                    (intérêts d'emprunt déductibles). Chaque solution comporte
+                    ses propres contraintes. Un conseil personnalisé est
+                    recommandé.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Les SCPI européennes sont-elles vraiment plus avantageuses
+                      fiscalement ?
+                    </strong>
+                  </p>
+                  <p>
+                    Elles peuvent l'être dans certains cas, selon votre situation.
+                    Les revenus de source étrangère ne sont souvent pas soumis
+                    aux prélèvements sociaux français de 17,2 %, ce qui peut
+                    représenter un avantage pour les TMI élevées. Mais cela ne
+                    signifie pas l'absence totale d'impôt : une imposition peut
+                    subsister dans le pays source ou via le mécanisme du taux
+                    effectif en France. Ne généralisez pas : vérifiez la
+                    convention applicable à votre situation.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      SCPI en direct ou assurance-vie : quelle fiscalité
+                      choisir ?
+                    </strong>
+                  </p>
+                  <p>
+                    En direct, les revenus fonciers SCPI sont imposés chaque
+                    année (IR + PS 17,2 %). En assurance-vie, la fiscalité est
+                    différée au moment des rachats, avec des abattements après
+                    8 ans. L'assurance-vie est souvent plus intéressante pour
+                    les TMI élevées et les longues durées, mais les frais du
+                    contrat s'ajoutent aux frais propres des SCPI. Le choix
+                    dépend de votre besoin de revenus immédiats, de votre TMI
+                    et de votre horizon. Consultez les{" "}
+                    <Link
+                      href="/avantages"
+                      className="font-semibold text-white underline underline-offset-2"
+                    >
+                      avantages des SCPI
+                    </Link>{" "}
+                    selon chaque mode de détention.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Peut-on réduire l'impôt avec des SCPI à crédit ?
+                    </strong>
+                  </p>
+                  <p>
+                    Oui, dans certaines conditions. En régime réel, les intérêts
+                    d'emprunt sont déductibles des revenus fonciers SCPI,
+                    réduisant la base imposable. Pour une TMI à 41 %, chaque
+                    euro déduit économise 41 centimes d'IR + 17,2 centimes de
+                    prélèvements sociaux. En cas de déficit foncier, celui-ci
+                    peut s'imputer sur le revenu global dans la limite de
+                    10 700 € par an. Les revenus ne sont pas garantis et un
+                    risque de perte en capital subsiste.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>Les revenus de SCPI sont-ils garantis ?</strong>
+                  </p>
+                  <p>
+                    Non. Les distributions dépendent des loyers encaissés, du
+                    taux d'occupation des immeubles et des décisions de la
+                    société de gestion. Les performances passées ne préjugent
+                    pas des performances futures. La valeur des parts peut
+                    baisser, entraînant un risque de perte en capital. Avant
+                    d'investir, consultez la{" "}
+                    <Link
+                      href="/revente"
+                      className="font-semibold text-white underline underline-offset-2"
+                    >
+                      revente des parts de SCPI
+                    </Link>{" "}
+                    pour comprendre les conditions de sortie.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>Comment réduire l'impôt sur les SCPI ?</strong>
+                  </p>
+                  <p>
+                    Plusieurs pistes peuvent, selon votre situation, atténuer
+                    la pression fiscale : détention en{" "}
+                    <strong>assurance-vie</strong> (fiscalité différée au
+                    rachat), <strong>démembrement</strong> (aucune imposition
+                    pendant la période), <strong>SCPI européennes</strong>{" "}
+                    (sans prélèvements sociaux 17,2 % dans certains cas selon
+                    les conventions), financement à{" "}
+                    <strong>crédit</strong> (intérêts potentiellement
+                    déductibles en régime réel) ou adoption du{" "}
+                    <strong>régime réel</strong> si les charges déductibles
+                    sont significatives. Aucune solution ne supprime totalement
+                    l'impôt et chacune comporte ses propres risques. Consultez
+                    les{" "}
+                    <Link
+                      href="/avantages"
+                      className="font-semibold text-white underline underline-offset-2"
+                    >
+                      avantages des SCPI
+                    </Link>{" "}
+                    pour une vue d'ensemble.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Quel rendement net peut-on espérer avec une SCPI ?
+                    </strong>
+                  </p>
+                  <p>
+                    Le rendement net dépend du taux de distribution brut, de
+                    votre TMI, du mode de détention et des prélèvements
+                    sociaux. À titre indicatif, un rendement brut de 5 % peut
+                    descendre à environ{" "}
+                    <strong>3,1 % net</strong> pour une TMI 30 % en
+                    micro-foncier, ou à environ{" "}
+                    <strong>2,6 % net</strong> sans abattement. Ces chiffres
+                    sont purement illustratifs. Les revenus ne sont jamais
+                    garantis — risque de perte en capital. Consultez notre{" "}
+                    <Link
+                      href="/guide-pdf"
+                      className="font-semibold text-white underline underline-offset-2"
+                    >
+                      guide SCPI gratuit
+                    </Link>{" "}
+                    pour aller plus loin.
                   </p>
                 </div>
               </div>

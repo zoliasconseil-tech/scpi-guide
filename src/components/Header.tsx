@@ -10,6 +10,7 @@ const navItems = [
   { href: "/guide-pdf", label: "Guide PDF" },
   { href: "/comparaison", label: "Comparaison" },
   { href: "/scpi-credit", label: "SCPI à crédit" },
+  { href: "/declaration-scpi-2026", label: "Déclaration 2026" },
   { href: "/blog", label: "Blog" },
 ];
 
