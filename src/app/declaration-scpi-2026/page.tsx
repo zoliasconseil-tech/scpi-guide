@@ -642,9 +642,11 @@ export default function DeclarationScpi2026Page() {
           <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
             <p>
               Ce tableau récapitule les principaux formulaires selon les
-              situations courantes. Les informations exactes à reporter
-              proviennent des documents transmis par la société de gestion.
-              En cas de doute, consultez un conseiller fiscal.
+              situations courantes, selon les règles fiscales en vigueur. Les
+              informations fiscales transmises par la société de gestion doivent
+              être vérifiées avant tout report dans votre déclaration. En cas de
+              doute ou de situation particulière, consultez un conseiller fiscal
+              selon votre situation personnelle.
             </p>
           </div>
 
@@ -1336,6 +1338,96 @@ export default function DeclarationScpi2026Page() {
             >
               Guide PDF gratuit
             </Link>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── Sources officielles ── */}
+      <Section tone="cream">
+        <Container className="py-16 sm:py-20">
+          <Title accent="sources officielles">
+            Sources officielles utiles pour votre déclaration
+          </Title>
+
+          <div className="mt-8 space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
+            <p>
+              Les formulaires fiscaux peuvent évoluer d'une année sur l'autre :
+              les cases à remplir, les seuils applicables et les modalités de
+              déclaration sont susceptibles de changer selon les règles fiscales
+              en vigueur. Les revenus étrangers doivent être traités avec une
+              attention particulière, car leur traitement dépend des conventions
+              bilatérales applicables et varie selon votre situation personnelle.
+              Les documents fournis par la société de gestion (IFU, rapport de
+              gestion) sont essentiels — mais ils doivent être recoupés avec les
+              instructions officielles de la DGFiP avant tout report.
+            </p>
+
+            <p>
+              Pour une déclaration complète, il est recommandé de comparer les
+              informations transmises par votre société de gestion avec les
+              indications disponibles sur les sites officiels. Ce contenu ne
+              remplace pas un conseil fiscal personnalisé adapté à votre
+              situation.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+              <h3 className="text-xl font-bold text-[#1f3b77]">
+                Direction Générale des Finances Publiques
+              </h3>
+              <p className="mt-4 text-base leading-8 text-slate-700">
+                Le portail officiel de la DGFiP : formulaires de déclaration
+                de revenus (2042, 2044, 2047), notices explicatives et accès
+                aux services en ligne de déclaration.
+              </p>
+              <a
+                href="https://www.impots.gouv.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block font-semibold text-[#4d7fd6] underline underline-offset-2"
+              >
+                impots.gouv.fr →
+              </a>
+            </div>
+
+            <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+              <h3 className="text-xl font-bold text-[#1f3b77]">
+                service-public.fr — Revenus fonciers
+              </h3>
+              <p className="mt-4 text-base leading-8 text-slate-700">
+                Le portail officiel de l'administration française : démarches
+                fiscales, régimes d'imposition des revenus fonciers et droits
+                des contribuables expliqués de façon accessible.
+              </p>
+              <a
+                href="https://www.service-public.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block font-semibold text-[#4d7fd6] underline underline-offset-2"
+              >
+                service-public.fr →
+              </a>
+            </div>
+
+            <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+              <h3 className="text-xl font-bold text-[#1f3b77]">
+                BOFiP — Bulletin officiel des finances publiques
+              </h3>
+              <p className="mt-4 text-base leading-8 text-slate-700">
+                Les commentaires officiels de l'administration fiscale sur les
+                textes applicables, notamment les règles relatives aux revenus
+                fonciers et aux revenus de source étrangère.
+              </p>
+              <a
+                href="https://bofip.impots.gouv.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block font-semibold text-[#4d7fd6] underline underline-offset-2"
+              >
+                bofip.impots.gouv.fr →
+              </a>
+            </div>
           </div>
         </Container>
       </Section>
