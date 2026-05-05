@@ -88,6 +88,46 @@ const faqSchema = {
         text: "Un oubli de déclaration peut entraîner un redressement fiscal assorti d'intérêts de retard (0,2 % par mois) et, selon les cas, de pénalités supplémentaires. En cas de bonne foi et de régularisation spontanée, les pénalités peuvent être réduites. La société de gestion transmet les informations fiscales à la DGFiP, ce qui permet à l'administration de vérifier la cohérence des déclarations. En cas de doute, consultez un conseiller fiscal.",
       },
     },
+    {
+      "@type": "Question",
+      name: "Quelle différence entre les formulaires 2042, 2044 et 2047 ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Le formulaire 2042 est la déclaration principale de revenus. L'annexe 2044 s'y ajoute en régime réel pour détailler les revenus fonciers et les charges déductibles (intérêts d'emprunt, frais de gestion). Le formulaire 2047 est réservé aux revenus de source étrangère, notamment pour les SCPI investissant hors de France. Ces formulaires peuvent être utilisés simultanément selon les revenus perçus et le mode de détention. Les montants à reporter figurent dans l'IFU transmis par la société de gestion.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Que faire si je n'ai pas reçu mon IFU SCPI ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Vérifiez d'abord l'espace client de la société de gestion ou de la plateforme de souscription. Si le document n'est pas disponible, contactez le distributeur ou la société de gestion directement. Ne déclarez pas des montants estimés sans document fiscal officiel. La déclaration préremplie sur impots.gouv.fr peut contenir des données transmises par la société de gestion — vérifiez-les avec l'IFU avant de valider.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Les revenus de SCPI sont-ils préremplis dans la déclaration ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "En partie. Les sociétés de gestion transmettent des informations à la DGFiP, qui peuvent apparaître dans la déclaration préremplie. Ces montants doivent impérativement être vérifiés et comparés avec l'IFU ou le document fiscal transmis par la société de gestion avant validation. Ne validez jamais une déclaration préremplie sans avoir vérifié les montants fournis par votre société de gestion.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Faut-il déclarer une SCPI même si les revenus sont faibles ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Oui. Il n'existe pas de seuil d'exonération de déclaration pour les revenus de SCPI. Même un faible montant de revenus fonciers doit être déclaré. En micro-foncier, l'abattement de 30 % s'applique automatiquement mais la déclaration reste obligatoire selon les règles fiscales en vigueur.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Comment déclarer une plus-value de revente de parts de SCPI ?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "La plus-value de cession de parts de SCPI suit le régime des plus-values immobilières des particuliers. Elle est calculée par la société de gestion et communiquée à l'investisseur lors de la cession. Des abattements progressifs s'appliquent selon la durée de détention. Les montants à reporter figurent dans les documents transmis lors de la cession. Pour en savoir plus, consultez notre page sur la revente de parts de SCPI.",
+      },
+    },
   ],
 };
 
@@ -414,6 +454,69 @@ export default function DeclarationScpi2026Page() {
         </Container>
       </Section>
 
+      {/* ── Les 7 étapes ── */}
+      <Section tone="white">
+        <Container className="py-16 sm:py-20">
+          <Title accent="7 étapes">
+            Déclaration SCPI 2026 : les 7 étapes à suivre
+          </Title>
+          <p className="mt-6 text-lg leading-9 text-slate-700 sm:text-xl">
+            Avant de remplir votre déclaration de revenus, suivez ces étapes dans l'ordre. La déclaration SCPI dépend du mode de détention et des informations transmises par la société de gestion — selon votre situation, certaines étapes peuvent ne pas s'appliquer.
+          </p>
+          <div className="mt-10 space-y-5">
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">1</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Récupérer l'IFU ou le document fiscal de la société de gestion</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Chaque société de gestion transmet avant la période de déclaration un document fiscal (IFU ou équivalent) par SCPI détenue. Il indique les montants à reporter, la ventilation par type de revenus (fonciers, financiers, étrangers par pays) et, le cas échéant, la valeur IFI par part. Ce document est indispensable — ne déclarez pas sans lui.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">2</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Identifier les revenus : français, étrangers, charges et intérêts éventuels</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Distinguez dans l'IFU les revenus fonciers français, les revenus de source étrangère par pays, les charges déductibles éventuelles et les intérêts d'emprunt si vous avez financé vos parts à crédit. Ces montants déterminent quels formulaires compléter selon votre situation.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">3</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Identifier le mode de détention de chaque SCPI</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">SCPI en direct, à crédit, via assurance-vie ou en nue-propriété : le mode de détention change la déclaration. Les SCPI en assurance-vie ne génèrent pas de revenus fonciers annuels à déclarer — la fiscalité intervient à l'occasion des rachats. Les SCPI en nue-propriété n'ont généralement pas de revenus à déclarer pendant la période de démembrement.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">4</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Remplir ou vérifier l'annexe 2044 si le régime réel s'applique</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Si vous êtes au régime réel (revenus fonciers bruts ≥ 15 000 € ou option volontaire), l'annexe 2044 est nécessaire pour détailler les charges déductibles, notamment les intérêts d'emprunt. Le résultat net est ensuite reporté sur le formulaire principal 2042. Le régime réel est irrévocable pendant 3 ans selon les règles en vigueur.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">5</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Reporter les montants dans le formulaire 2042</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Le formulaire 2042 est la déclaration principale. En micro-foncier, reportez les revenus fonciers bruts indiqués dans l'IFU. En régime réel, reportez le résultat net de l'annexe 2044. Les revenus de capitaux mobiliers éventuels sont reportés dans la section correspondante. Ne modifiez pas les montants transmis par la société de gestion.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">6</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Traiter les revenus étrangers via le formulaire 2047 si nécessaire</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Si vos SCPI investissent hors de France, le formulaire 2047 est requis pour chaque pays concerné selon les règles fiscales en vigueur. Les montants par pays figurent dans le document fiscal de la société de gestion. L'omission de ce formulaire pour les SCPI européennes peut entraîner une régularisation fiscale.</p>
+              </div>
+            </div>
+            <div className="flex gap-5 rounded-[20px] bg-[#eaf1fb] p-6 sm:p-8">
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#1f3b77] text-xl font-bold text-white">7</div>
+              <div>
+                <h3 className="text-xl font-bold text-[#1f3b77]">Vérifier l'IFI et conserver tous les justificatifs</h3>
+                <p className="mt-2 text-lg leading-8 text-slate-700">Si votre patrimoine immobilier net peut dépasser le seuil applicable à l'IFI, vérifiez la valeur IFI par part communiquée par la société de gestion. Conservez l'IFU, les relevés d'intérêts d'emprunt et tous les documents fiscaux au moins 3 ans — ils sont indispensables en cas de contrôle fiscal selon les délais de reprise applicables.</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── 1. Quels revenus déclarer ── */}
       <Section tone="white">
         <Container className="py-16 sm:py-20">
@@ -698,6 +801,50 @@ export default function DeclarationScpi2026Page() {
             transmises par la société de gestion selon les cas. Ce contenu
             ne remplace pas un conseil fiscal personnalisé.
           </p>
+        </Container>
+      </Section>
+
+      {/* ── Régime réel ou micro-foncier ── */}
+      <Section tone="cream">
+        <Container className="py-16 sm:py-20">
+          <Title accent="micro-foncier">
+            Régime réel ou micro-foncier : que vérifier avant de déclarer ?
+          </Title>
+          <div className="mt-8 space-y-5 text-lg leading-9 text-slate-700 sm:text-xl">
+            <p>
+              Le choix entre micro-foncier et régime réel conditionne les charges que vous pouvez déduire. Il s'applique à l'ensemble de vos revenus fonciers — pas seulement à vos SCPI. Vérifiez votre situation globale avant de décider, selon les règles fiscales en vigueur.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+              <h3 className="text-2xl font-bold text-[#4d7fd6]">Micro-foncier</h3>
+              <ul className="mt-5 space-y-3 text-lg leading-8 text-slate-700">
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#4d7fd6]">→</span><span>Applicable si vos revenus fonciers bruts totaux (SCPI + biens détenus en direct) sont inférieurs à 15 000 € sur l'année</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#4d7fd6]">→</span><span>Abattement forfaitaire de 30 % automatique — aucun justificatif à fournir</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#4d7fd6]">→</span><span>Impossible de déduire les intérêts d'emprunt ou les charges réelles</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#4d7fd6]">→</span><span>Non applicable si vous bénéficiez de certains dispositifs fiscaux particuliers — à vérifier selon votre situation</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#4d7fd6]">→</span><span>Déclaration simplifiée : report du montant brut fourni par l'IFU dans le formulaire 2042</span></li>
+              </ul>
+            </div>
+            <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+              <h3 className="text-2xl font-bold text-[#1f3b77]">Régime réel</h3>
+              <ul className="mt-5 space-y-3 text-lg leading-8 text-slate-700">
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#1f3b77]">→</span><span>Obligatoire si revenus fonciers bruts totaux ≥ 15 000 €, ou sur option volontaire</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#1f3b77]">→</span><span>Permet de déduire les charges réelles : intérêts d'emprunt, frais de gestion, assurances</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#1f3b77]">→</span><span>Irrévocable pendant 3 ans — réfléchissez avant d'opter selon votre situation</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#1f3b77]">→</span><span>Un déficit foncier peut s'imputer sur le revenu global dans la limite de 10 700 €/an (hors intérêts d'emprunt) selon les règles applicables</span></li>
+                <li className="flex items-start gap-3"><span className="mt-1 flex-shrink-0 font-bold text-[#1f3b77]">→</span><span>Nécessite de conserver et de pouvoir fournir tous les justificatifs en cas de contrôle</span></li>
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 rounded-[20px] bg-[#1f3b77] px-8 py-6 text-lg text-white/90">
+            <p>
+              <strong className="text-[#f5c455]">À retenir selon votre situation :</strong>{" "}
+              le régime réel peut devenir intéressant dès lors que vous avez des{" "}
+              <Link href="/scpi-credit" className="text-[#f5c455] underline underline-offset-2">SCPI à crédit</Link>{" "}
+              avec des intérêts d'emprunt significatifs. Le micro-foncier reste plus simple si vos charges réelles sont inférieures à l'abattement forfaitaire de 30 %. Ce contenu ne remplace pas un conseil fiscal personnalisé — consultez un professionnel selon votre situation avant de choisir un régime.
+            </p>
+          </div>
         </Container>
       </Section>
 
@@ -1153,6 +1300,68 @@ export default function DeclarationScpi2026Page() {
         </Container>
       </Section>
 
+      {/* ── IFI et SCPI ── */}
+      <Section tone="white">
+        <Container className="py-16 sm:py-20">
+          <Title accent="IFI">
+            IFI et déclaration des parts de SCPI : ce qu'il faut savoir
+          </Title>
+          <div className="mt-8 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div className="space-y-6 text-lg leading-9 text-slate-700 sm:text-xl">
+              <p>
+                L'Impôt sur la Fortune Immobilière (IFI) concerne les contribuables dont le patrimoine immobilier net taxable dépasse 1,3 million d'euros au 1er janvier de l'année de déclaration. Les parts de SCPI entrent dans l'assiette IFI à hauteur de leur fraction immobilière nette.
+              </p>
+              <p>
+                <strong className="text-[#1f3b77]">Ce qui entre dans l'assiette IFI :</strong>
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>La fraction de la valeur des parts représentant les actifs immobiliers nets de la SCPI, communiquée chaque année par la société de gestion sous l'appellation "valeur IFI par part"</li>
+                <li>Cette valeur est généralement inférieure au prix de la part ou à la valeur de retrait — elle figure dans l'IFU ou dans un document spécifique selon la société de gestion</li>
+                <li>Parts de SCPI européennes : entrent également dans l'assiette IFI à hauteur de leur fraction immobilière selon les informations transmises</li>
+              </ul>
+              <p>
+                <strong className="text-[#1f3b77]">Ce qui peut être exclu ou réduit :</strong>
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>Les parts détenues en nue-propriété sont en principe exclues de l'assiette IFI du nu-propriétaire selon les règles applicables</li>
+                <li>Les dettes contractées pour l'acquisition des parts peuvent être déductibles selon les conditions et limites prévues</li>
+                <li>Les SCPI détenues via certains contrats d'assurance-vie peuvent avoir un traitement particulier — à vérifier avec votre assureur selon votre situation</li>
+              </ul>
+              <p>
+                <strong className="text-[#1f3b77]">Comment déclarer à l'IFI :</strong>
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>Récupérez la valeur IFI par part dans l'IFU ou le document fiscal de chaque société de gestion</li>
+                <li>Multipliez par le nombre de parts détenues au 1er janvier 2026</li>
+                <li>Reportez dans la déclaration IFI selon les instructions de la DGFiP et conservez les justificatifs</li>
+              </ul>
+              <p className="text-base italic text-slate-500">
+                Ce contenu ne remplace pas un conseil fiscal personnalisé. La déclaration IFI dépend de l'ensemble de votre patrimoine immobilier net, des dettes déductibles et de votre situation selon les règles fiscales en vigueur.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <InfoCard title="Seuil IFI 2026">
+                <p>
+                  Le patrimoine immobilier net taxable doit dépasser{" "}
+                  <strong className="text-[#1f3b77]">1,3 million d'euros</strong>{" "}
+                  au 1er janvier 2026 pour être assujetti à l'IFI. En dessous de ce seuil, aucune déclaration IFI n'est requise pour ce seul motif.
+                </p>
+              </InfoCard>
+              <InfoCard title="Valeur IFI par part">
+                <p>
+                  La société de gestion communique chaque année la valeur IFI par part. Elle reflète la fraction immobilière nette. Cette valeur est inférieure au prix de souscription et figure dans l'IFU ou dans les documents annuels transmis par la société de gestion.
+                </p>
+              </InfoCard>
+              <InfoCard title="Nue-propriété et IFI">
+                <p>
+                  Si vous détenez des parts en nue-propriété dans le cadre d'un démembrement, ces parts sont en principe exclues de votre assiette IFI selon les règles applicables. Vérifiez ce point avec les informations transmises par la société de gestion selon votre situation.
+                </p>
+              </InfoCard>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── 8. Erreurs fréquentes ── */}
       <Section tone="blue">
         <Container className="py-16 sm:py-20">
@@ -1253,6 +1462,58 @@ export default function DeclarationScpi2026Page() {
         </Container>
       </Section>
 
+      {/* ── Que faire sans IFU ── */}
+      <Section tone="cream">
+        <Container className="py-16 sm:py-20">
+          <Title accent="IFU SCPI">
+            Que faire si vous n'avez pas reçu votre IFU SCPI ?
+          </Title>
+          <div className="mt-8 space-y-5 text-lg leading-9 text-slate-700 sm:text-xl">
+            <p>
+              La période de déclaration peut débuter avant que vous ayez reçu tous vos documents fiscaux SCPI. Voici les démarches à suivre pour éviter toute erreur dans votre déclaration de revenus SCPI 2026.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <InfoCard title="Vérifier l'espace client">
+              <p>
+                La plupart des sociétés de gestion et plateformes de souscription mettent à disposition l'IFU dans votre espace client en ligne. Vérifiez-le avant de contacter le service client — le document est souvent disponible en téléchargement dès le mois de février selon la société de gestion.
+              </p>
+            </InfoCard>
+            <InfoCard title="Contacter le distributeur">
+              <p>
+                Si vous avez souscrit via un conseiller en gestion de patrimoine ou une plateforme, celui-ci peut obtenir le document fiscal auprès de la société de gestion. Contactez-le en amont de la période de déclaration si vous n'avez rien reçu.
+              </p>
+            </InfoCard>
+            <InfoCard title="Attendre si délais en cours">
+              <p>
+                Les sociétés de gestion ont jusqu'à une date limite réglementaire pour transmettre les documents fiscaux. Si ce délai n'est pas expiré, attendez avant d'estimer vos revenus. Déclarer des montants approximatifs crée un risque de régularisation ultérieure.
+              </p>
+            </InfoCard>
+            <InfoCard title="Ne pas estimer sans document officiel">
+              <p>
+                Ne reportez jamais des montants estimés ou calculés vous-même sans document fiscal officiel. Les informations transmises par la société de gestion à la DGFiP servent de référence — tout écart peut entraîner une demande de justification ou une rectification.
+              </p>
+            </InfoCard>
+            <InfoCard title="Comparer avec la déclaration préremplie">
+              <p>
+                La déclaration de revenus disponible sur impots.gouv.fr peut être partiellement préremplie avec des données transmises par la société de gestion. Vérifiez impérativement ces montants préremplis en les comparant avec votre IFU avant de valider votre déclaration.
+              </p>
+            </InfoCard>
+            <InfoCard title="Conserver tous les justificatifs">
+              <p>
+                Une fois reçu, conservez l'IFU et tous les documents fiscaux au minimum 3 ans, idéalement dans un dossier dédié par SCPI. Ces documents sont indispensables en cas de contrôle fiscal selon les délais de reprise applicables.
+              </p>
+            </InfoCard>
+          </div>
+          <div className="mt-8 rounded-[20px] bg-[#1f3b77] px-8 py-6 text-lg text-white/90">
+            <p>
+              <strong className="text-[#f5c455]">À retenir :</strong>{" "}
+              les revenus SCPI sont transmis à la DGFiP par les sociétés de gestion selon les informations disponibles. Ne déclarez que les montants figurant dans les documents officiels transmis par la société de gestion ou l'intermédiaire de souscription, selon votre situation et les règles fiscales en vigueur.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── 9. Checklist ── */}
       <Section tone="white">
         <Container className="py-16 sm:py-20">
@@ -1339,6 +1600,52 @@ export default function DeclarationScpi2026Page() {
               Guide PDF gratuit
             </Link>
           </div>
+        </Container>
+      </Section>
+
+      {/* ── Schéma simplifié ── */}
+      <Section tone="blue">
+        <Container className="py-16 sm:py-20">
+          <Title accent="Schéma" center>
+            Schéma simplifié de la déclaration SCPI 2026
+          </Title>
+          <p className="mt-6 text-center text-lg leading-9 text-slate-700 sm:text-xl">
+            Ce schéma illustre le parcours type selon votre mode de détention. Il est simplifié et pédagogique — votre situation peut différer selon les informations transmises par la société de gestion.
+          </p>
+          <div className="mt-12 flex flex-col items-center">
+            <div className="w-full max-w-xl rounded-[20px] bg-[#1f3b77] px-8 py-6 text-center text-white shadow-lg">
+              <p className="text-lg font-bold">Revenus SCPI perçus en 2025</p>
+              <p className="mt-1 text-base text-white/80">Distributions reçues dans l'année selon le mode de détention</p>
+            </div>
+            <div className="h-10 w-1 bg-[#4d7fd6]" />
+            <div className="w-full max-w-xl rounded-[20px] bg-[#4d7fd6] px-8 py-6 text-center text-white shadow-lg">
+              <p className="text-lg font-bold">IFU / Document fiscal de la société de gestion</p>
+              <p className="mt-1 text-base text-white/80">Ventilation revenus fonciers · financiers · étrangers par pays · valeur IFI</p>
+            </div>
+            <div className="h-10 w-1 bg-[#4d7fd6]" />
+            <div className="grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="rounded-[16px] border-2 border-[#4d7fd6] bg-white px-5 py-5 text-center shadow">
+                <p className="font-bold text-[#1f3b77]">Formulaire 2042</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Déclaration principale — revenus fonciers en micro-foncier ou résultat net du 2044</p>
+              </div>
+              <div className="rounded-[16px] border-2 border-[#f5c455] bg-white px-5 py-5 text-center shadow">
+                <p className="font-bold text-[#1f3b77]">Annexe 2044</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Régime réel — charges déductibles, intérêts d'emprunt, résultat net foncier</p>
+              </div>
+              <div className="rounded-[16px] border-2 border-[#17365d] bg-white px-5 py-5 text-center shadow">
+                <p className="font-bold text-[#1f3b77]">Formulaire 2047</p>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Revenus étrangers — SCPI européennes, traitement par pays et convention applicable</p>
+              </div>
+            </div>
+            <div className="h-10 w-1 bg-[#4d7fd6]" />
+            <div className="w-full max-w-xl rounded-[20px] bg-[#f5c455] px-8 py-6 text-center shadow-lg">
+              <p className="text-lg font-bold text-[#1f3b77]">Vérification finale et validation</p>
+              <p className="mt-1 text-base text-[#1f3b77]/80">Relire avant de soumettre · vérifier l'IFI si concerné · conserver les justificatifs</p>
+            </div>
+          </div>
+          <p className="mt-8 text-center text-base italic text-slate-500">
+            Ce schéma est simplifié et pédagogique. Il ne tient pas compte de toutes les situations possibles (assurance-vie, nue-propriété, IFI, plus-values de revente). Ce contenu ne remplace pas un conseil fiscal personnalisé selon votre situation.
+          </p>
         </Container>
       </Section>
 
@@ -1559,6 +1866,80 @@ export default function DeclarationScpi2026Page() {
                     cas de bonne foi, une régularisation spontanée peut réduire
                     les pénalités. En cas de doute, consultez un conseiller
                     fiscal.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Quelle différence entre les formulaires 2042, 2044 et 2047 ?
+                    </strong>
+                  </p>
+                  <p>
+                    Le formulaire 2042 est la déclaration principale de revenus.
+                    L'annexe 2044 s'y ajoute en régime réel pour détailler
+                    les charges déductibles (intérêts d'emprunt, frais de
+                    gestion). Le formulaire 2047 est réservé aux revenus de
+                    source étrangère — notamment pour les SCPI européennes.
+                    Ces formulaires peuvent être utilisés simultanément selon
+                    votre situation et les informations transmises par la
+                    société de gestion.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Que faire si je n'ai pas reçu mon IFU SCPI ?
+                    </strong>
+                  </p>
+                  <p>
+                    Vérifiez d'abord l'espace client de la société de gestion
+                    ou de la plateforme de souscription. Si le document n'est
+                    pas disponible, contactez le distributeur ou la société de
+                    gestion. Ne déclarez pas des montants estimés sans document
+                    fiscal officiel. La déclaration préremplie sur
+                    impots.gouv.fr peut contenir des données transmises par
+                    la société de gestion — à vérifier avant validation.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Faut-il déclarer une SCPI même si les revenus sont faibles ?
+                    </strong>
+                  </p>
+                  <p>
+                    Oui. Il n'existe pas de seuil d'exonération de déclaration
+                    pour les revenus de SCPI. Même un faible montant de revenus
+                    fonciers doit être déclaré selon les règles fiscales en
+                    vigueur. En micro-foncier, l'abattement de 30 % s'applique
+                    automatiquement mais la déclaration reste obligatoire.
+                  </p>
+                </div>
+
+                <div>
+                  <p>
+                    <strong>
+                      Comment déclarer une plus-value de{" "}
+                      <Link
+                        href="/revente"
+                        className="text-white underline underline-offset-2"
+                      >
+                        revente de parts de SCPI
+                      </Link>{" "}
+                      ?
+                    </strong>
+                  </p>
+                  <p>
+                    La plus-value suit le régime des plus-values immobilières
+                    des particuliers. Elle est calculée par la société de
+                    gestion et communiquée à l'investisseur lors de la cession.
+                    Des abattements progressifs s'appliquent selon la durée de
+                    détention. Les montants à reporter figurent dans les
+                    documents transmis lors de la cession. Les revenus ne sont
+                    pas garantis — un risque de perte en capital existe.
                   </p>
                 </div>
               </div>
