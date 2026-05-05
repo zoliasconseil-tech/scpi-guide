@@ -1997,7 +1997,7 @@ export default function FiscalitePage() {
             <div className="mt-6 flex-shrink-0 sm:mt-0">
               <Link
                 href="/declaration-scpi-2026"
-                className="inline-block rounded-full bg-[#1f3b77] px-7 py-4 text-center text-lg font-bold text-white shadow-[0_8px_20px_rgba(31,59,119,0.2)] transition hover:opacity-90 hover:text-white"
+                className="inline-block rounded-full bg-[#1f3b77] px-7 py-4 text-center text-lg font-bold !text-white shadow-[0_8px_20px_rgba(31,59,119,0.2)] transition hover:opacity-90"
               >
                 Comment déclarer ses SCPI en 2026
               </Link>
