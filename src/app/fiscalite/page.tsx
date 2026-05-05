@@ -1977,6 +1977,35 @@ export default function FiscalitePage() {
         </Container>
       </Section>
 
+      {/* ── ENCART MAILLAGE : déclaration SCPI 2026 ── */}
+      <Section tone="white">
+        <Container className="py-10 sm:py-12">
+          <div className="rounded-[28px] bg-[#eaf1fb] px-8 py-8 sm:flex sm:items-center sm:justify-between sm:gap-8">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-[#4d7fd6]">
+                Déclaration SCPI 2026
+              </p>
+              <h2 className="mt-2 text-2xl font-bold leading-tight text-[#1f3b77] sm:text-3xl">
+                Prêt à remplir votre déclaration ?
+              </h2>
+              <p className="mt-3 text-lg leading-8 text-slate-700">
+                Vous préparez votre déclaration fiscale ? Consultez notre guide
+                complet pour savoir comment déclarer vos SCPI en 2026, quels
+                formulaires utiliser (2042, 2044, 2047) et quelles erreurs éviter.
+              </p>
+            </div>
+            <div className="mt-6 flex-shrink-0 sm:mt-0">
+              <Link
+                href="/declaration-scpi-2026"
+                className="inline-block rounded-full bg-[#1f3b77] px-7 py-4 text-center text-lg font-bold text-white shadow-[0_8px_20px_rgba(31,59,119,0.2)] transition hover:opacity-90"
+              >
+                Comment déclarer ses SCPI en 2026
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── SECTION 9 : FAQ élargie ── */}
       <Section tone="blue">
         <Container className="py-16 sm:py-20">
