@@ -3,14 +3,14 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Comment déclarer ses SCPI en 2026 : IFU, 2042, 2044 et 2047",
+  title: "Déclaration SCPI 2026 : formulaires IFU, 2042, 2044 et 2047",
   description:
     "Guide pratique pour déclarer ses revenus de SCPI en 2026 : IFU, revenus fonciers, formulaires 2042, 2044, 2047, SCPI européennes et IFI.",
   alternates: {
     canonical: "https://www.scpi-gouv.org/declaration-scpi-2026",
   },
   openGraph: {
-    title: "Comment déclarer ses SCPI en 2026 : IFU, 2042, 2044 et 2047",
+    title: "Déclaration SCPI 2026 : formulaires IFU, 2042, 2044 et 2047",
     description:
       "Guide pratique pour déclarer ses revenus de SCPI en 2026 : IFU, revenus fonciers, formulaires 2042, 2044, 2047, SCPI européennes et IFI.",
     url: "https://www.scpi-gouv.org/declaration-scpi-2026",
