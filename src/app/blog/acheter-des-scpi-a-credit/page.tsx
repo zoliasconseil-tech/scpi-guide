@@ -78,9 +78,12 @@ export default function ArticleScpiCreditPage() {
               d’évaluer un ordre de grandeur et d’organiser la réflexion.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/scpi-credit" className="btn-primary">
                 Accéder au simulateur SCPI à crédit
+              </Link>
+              <Link href="/fiscalite" className="btn-secondary">
+                Fiscalité des SCPI à crédit
               </Link>
             </div>
           </article>

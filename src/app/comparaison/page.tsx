@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ComparisonTool from "@/components/ComparisonTool";
 import SectionTitle from "@/components/SectionTitle";
 
@@ -172,6 +173,48 @@ export default function ComparaisonPage() {
 
           <div id="comparateur-scpi">
             <ComparisonTool />
+          </div>
+        </div>
+      </section>
+
+      {/* ── À LIRE AUSSI ── */}
+      <section className="section" style={{ background: "#eaf0fb" }}>
+        <div className="container-site">
+          <h2
+            style={{
+              fontSize: "clamp(22px, 3vw, 30px)",
+              fontWeight: 800,
+              color: "var(--primary)",
+              marginBottom: 20,
+            }}
+          >
+            À lire aussi sur les SCPI
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/avantages"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Avantages des SCPI →
+            </Link>
+            <Link
+              href="/fiscalite"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Fiscalité SCPI →
+            </Link>
+            <Link
+              href="/revente"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Liquidité et revente SCPI →
+            </Link>
+            <Link
+              href="/scpi-credit"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Simulation SCPI à crédit →
+            </Link>
           </div>
         </div>
       </section>

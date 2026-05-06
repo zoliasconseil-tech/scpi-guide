@@ -78,9 +78,12 @@ export default function ArticleScpiOuLocatifPage() {
               travaux et sur la stratégie patrimoniale.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/comparaison" className="btn-primary">
                 Comparer plusieurs SCPI
+              </Link>
+              <Link href="/avantages" className="btn-secondary">
+                Avantages des SCPI
               </Link>
             </div>
           </article>

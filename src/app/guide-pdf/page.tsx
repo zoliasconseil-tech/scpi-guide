@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
@@ -121,6 +122,51 @@ export default function GuidePdfPage() {
               buttonLabel="Télécharger le guide"
               downloadUrl="/guide-scpi-2026.pdf"
             />
+          </div>
+        </div>
+      </section>
+
+      {/* ── GUIDES COMPLÉMENTAIRES ── */}
+      <section className="section" style={{ background: "#eaf0fb" }}>
+        <div className="container-site">
+          <h2
+            style={{
+              fontSize: "clamp(22px, 3vw, 30px)",
+              fontWeight: 800,
+              color: "var(--primary)",
+              marginBottom: 8,
+            }}
+          >
+            Guides complémentaires
+          </h2>
+          <p className="mb-6 text-[17px] leading-7 text-slate-600">
+            Pour approfondir votre réflexion sur les SCPI, consultez nos pages thématiques.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/fiscalite"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Fiscalité des SCPI →
+            </Link>
+            <Link
+              href="/avantages"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Avantages des SCPI →
+            </Link>
+            <Link
+              href="/declaration-scpi-2026"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Déclaration SCPI 2026 →
+            </Link>
+            <Link
+              href="/comparaison"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Comparer les SCPI →
+            </Link>
           </div>
         </div>
       </section>

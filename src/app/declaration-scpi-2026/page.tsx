@@ -2002,6 +2002,47 @@ export default function DeclarationScpi2026Page() {
         </Container>
       </Section>
 
+      {/* ── À LIRE AUSSI ── */}
+      <Section tone="blue">
+        <Container className="py-12 sm:py-16">
+          <h2 className="mb-6 text-3xl font-bold text-[#1f3b77] sm:text-4xl">
+            À lire aussi sur les SCPI
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <Link
+              href="/fiscalite"
+              className="rounded-[16px] border border-[#c8d8ef] bg-white px-5 py-4 text-[16px] font-semibold text-[#1f3b77] shadow-sm transition hover:shadow-md"
+            >
+              Fiscalité des SCPI →
+            </Link>
+            <Link
+              href="/scpi-credit"
+              className="rounded-[16px] border border-[#c8d8ef] bg-white px-5 py-4 text-[16px] font-semibold text-[#1f3b77] shadow-sm transition hover:shadow-md"
+            >
+              SCPI à crédit →
+            </Link>
+            <Link
+              href="/revente"
+              className="rounded-[16px] border border-[#c8d8ef] bg-white px-5 py-4 text-[16px] font-semibold text-[#1f3b77] shadow-sm transition hover:shadow-md"
+            >
+              Revente de parts de SCPI →
+            </Link>
+            <Link
+              href="/guide-pdf"
+              className="rounded-[16px] border border-[#c8d8ef] bg-white px-5 py-4 text-[16px] font-semibold text-[#1f3b77] shadow-sm transition hover:shadow-md"
+            >
+              Guide SCPI gratuit →
+            </Link>
+            <Link
+              href="/faq"
+              className="rounded-[16px] border border-[#c8d8ef] bg-white px-5 py-4 text-[16px] font-semibold text-[#1f3b77] shadow-sm transition hover:shadow-md"
+            >
+              FAQ SCPI →
+            </Link>
+          </div>
+        </Container>
+      </Section>
+
       {/* ── CTA FINAL ── */}
       <Section tone="cream">
         <Container className="py-16 sm:py-20">

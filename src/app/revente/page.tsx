@@ -2006,6 +2006,48 @@ export default function ReventePage() {
         </div>
       </section>
 
+      {/* ── À LIRE AUSSI ── */}
+      <section className="section" style={{ background: "#eaf0fb" }}>
+        <div className="container-site">
+          <h2
+            style={{
+              fontSize: "clamp(22px, 3vw, 30px)",
+              fontWeight: 800,
+              color: "var(--primary)",
+              marginBottom: 20,
+            }}
+          >
+            À lire aussi sur les SCPI
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <Link
+              href="/fiscalite"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Fiscalité des SCPI →
+            </Link>
+            <Link
+              href="/declaration-scpi-2026"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Déclarer ses revenus SCPI →
+            </Link>
+            <Link
+              href="/comparaison"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Comparer les SCPI →
+            </Link>
+            <Link
+              href="/guide-pdf"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              Guide SCPI gratuit →
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="section">
         <div className="container-site grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">

@@ -90,9 +90,12 @@ export default function ArticleFiscaliteScpiPage() {
               indispensable avant toute décision.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/guide-pdf" className="btn-primary">
                 Télécharger le guide SCPI
+              </Link>
+              <Link href="/fiscalite" className="btn-secondary">
+                Guide complet fiscalité SCPI
               </Link>
             </div>
           </article>

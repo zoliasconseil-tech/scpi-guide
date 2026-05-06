@@ -389,9 +389,12 @@ export default function ArticleScpiVsImmobilierLocatifPage() {
               d'investissement.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/comparaison" className="btn-primary">
                 Accéder au comparateur de SCPI
+              </Link>
+              <Link href="/avantages" className="btn-secondary">
+                Avantages des SCPI
               </Link>
             </div>
           </article>

@@ -352,9 +352,12 @@ export default function ArticleScpiEnAssuranceViePage() {
               un avocat fiscaliste avant toute décision d'investissement.
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/fiscalite" className="btn-primary">
                 Comprendre la fiscalité des SCPI
+              </Link>
+              <Link href="/declaration-scpi-2026" className="btn-secondary">
+                Déclaration SCPI 2026
               </Link>
             </div>
           </article>
