@@ -1,0 +1,47 @@
+# Guide SCPI
+
+> Site pédagogique francophone consacré aux SCPI : fonctionnement, fiscalité, avantages, revente, comparaison, investissement à crédit et déclaration fiscale.
+
+## Présentation
+
+Guide SCPI aide les épargnants à comprendre les Sociétés Civiles de Placement Immobilier avant d'investir. Le site propose des contenus informatifs sur la fiscalité, les risques, la liquidité, la revente, les modes de détention, l'investissement à crédit et la déclaration des revenus de SCPI.
+
+Le contenu est pédagogique et informatif. Il ne constitue pas un conseil en investissement, un conseil fiscal personnalisé ou une recommandation d'achat.
+
+## Pages principales
+
+- Accueil : https://www.scpi-gouv.org/
+- Avantages des SCPI : https://www.scpi-gouv.org/avantages
+- Fiscalité des SCPI : https://www.scpi-gouv.org/fiscalite
+- Revente des parts de SCPI : https://www.scpi-gouv.org/revente
+- Comparaison SCPI : https://www.scpi-gouv.org/comparaison
+- SCPI à crédit : https://www.scpi-gouv.org/scpi-credit
+- Déclaration SCPI 2026 : https://www.scpi-gouv.org/declaration-scpi-2026
+- Guide SCPI gratuit : https://www.scpi-gouv.org/guide-pdf
+- FAQ SCPI : https://www.scpi-gouv.org/faq
+- Blog SCPI : https://www.scpi-gouv.org/blog
+
+## Sujets couverts
+
+- Fonctionnement des SCPI
+- Avantages et risques des SCPI
+- Fiscalité des revenus fonciers
+- SCPI européennes
+- Déclaration fiscale des SCPI
+- Formulaires 2042, 2044 et 2047
+- IFU SCPI
+- Revente et liquidité
+- Investissement SCPI à crédit
+- Comparaison avec l'immobilier locatif
+- Assurance-vie et SCPI
+- IFI et patrimoine immobilier
+
+## Informations importantes
+
+Les performances passées ne préjugent pas des performances futures. Les SCPI comportent des risques, notamment un risque de perte en capital, un risque de liquidité et un risque lié au marché immobilier.
+
+La fiscalité dépend de la situation personnelle de chaque investisseur, du mode de détention, de la nature des revenus et des règles fiscales en vigueur.
+
+## Sitemap
+
+https://www.scpi-gouv.org/sitemap.xml
