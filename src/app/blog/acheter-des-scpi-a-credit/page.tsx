@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Acheter des SCPI à crédit : avantages, limites et points d'attention",
+  description:
+    "Pourquoi certains investisseurs choisissent les SCPI à crédit, comment fonctionne l'effet de levier et quels critères analyser avant de se lancer.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog/acheter-des-scpi-a-credit",
+  },
+};
 
 export default function ArticleScpiCreditPage() {
   return (

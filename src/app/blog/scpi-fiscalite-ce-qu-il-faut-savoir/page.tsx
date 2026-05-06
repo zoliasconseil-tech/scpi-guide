@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Fiscalité des SCPI : ce qu'il faut savoir avant d'investir",
+  description:
+    "Comprendre la fiscalité des SCPI en direct, les prélèvements sociaux, l'impact de la tranche marginale d'imposition et les points de vigilance avant toute souscription.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog/scpi-fiscalite-ce-qu-il-faut-savoir",
+  },
+};
 
 export default function ArticleFiscaliteScpiPage() {
   return (

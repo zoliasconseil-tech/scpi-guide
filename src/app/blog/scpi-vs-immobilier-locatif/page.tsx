@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "SCPI vs immobilier locatif direct : le grand comparatif",
+  description:
+    "Comparaison complète entre SCPI et immobilier locatif direct : rendement, fiscalité, liquidité, gestion et contraintes — pour faire le meilleur choix patrimonial.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog/scpi-vs-immobilier-locatif",
+  },
+};
 
 export default function ArticleScpiVsImmobilierLocatifPage() {
   return (

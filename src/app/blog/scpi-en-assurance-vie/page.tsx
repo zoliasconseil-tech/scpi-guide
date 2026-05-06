@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "SCPI en assurance-vie : la combinaison gagnante pour optimiser votre fiscalité",
+  description:
+    "Pourquoi loger ses SCPI dans une assurance-vie peut transformer la fiscalité des revenus, faciliter la transmission et améliorer la liquidité — avec les limites à connaître.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog/scpi-en-assurance-vie",
+  },
+};
 
 export default function ArticleScpiEnAssuranceViePage() {
   return (

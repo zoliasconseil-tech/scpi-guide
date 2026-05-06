@@ -36,6 +36,12 @@ const articles = [
     excerpt:
       "Pourquoi loger ses SCPI dans une assurance-vie peut transformer la fiscalité des revenus, faciliter la transmission et améliorer la liquidité — avec les limites à connaître.",
   },
+  {
+    slug: "scpi-vs-immobilier-locatif",
+    title: "SCPI vs immobilier locatif direct : le grand comparatif",
+    excerpt:
+      "Comparaison complète entre SCPI et immobilier locatif direct : rendement, fiscalité, liquidité, gestion et contraintes — pour faire le meilleur choix patrimonial.",
+  },
 ];
 
 export default function BlogPage() {

@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "SCPI ou immobilier locatif en direct : quelles différences ?",
+  description:
+    "Gestion, diversification, liquidité, fiscalité, montant investi, effort de gestion : une comparaison claire entre SCPI et investissement locatif classique.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog/scpi-ou-immobilier-locatif",
+  },
+};
 
 export default function ArticleScpiOuLocatifPage() {
   return (
