@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import LeadForm from "@/components/LeadForm";
+
+export const metadata: Metadata = {
+  title: "Guide SCPI gratuit : comprendre avant d'investir",
+  description:
+    "Téléchargez un guide SCPI gratuit pour comprendre le fonctionnement, les avantages, la fiscalité, la revente, les risques et les critères de choix.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/guide-pdf",
+  },
+};
 
 export default function GuidePdfPage() {
   return (

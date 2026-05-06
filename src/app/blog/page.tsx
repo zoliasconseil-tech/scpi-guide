@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
+
+export const metadata: Metadata = {
+  title: "Blog SCPI : fiscalité, rendement, revente et conseils",
+  description:
+    "Articles pédagogiques sur les SCPI : fiscalité, rendement, déclaration, revente, investissement à crédit, comparaison et bonnes pratiques.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/blog",
+  },
+};
 
 const articles = [
   {

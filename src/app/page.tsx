@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+
+export const metadata: Metadata = {
+  title: "Guide SCPI 2026 : comprendre, comparer et investir",
+  description:
+    "Guide pédagogique pour comprendre les SCPI, comparer les solutions, analyser la fiscalité, les avantages, la revente et l'investissement à crédit.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org",
+  },
+};
 
 type SectionTone = "white" | "blue" | "cream";
 

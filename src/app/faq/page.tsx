@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import SectionTitle from "@/components/SectionTitle";
+
+export const metadata: Metadata = {
+  title: "FAQ SCPI : questions fréquentes avant d'investir",
+  description:
+    "Réponses aux questions fréquentes sur les SCPI : fonctionnement, fiscalité, rendement, risques, revente, liquidité et déclaration.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/faq",
+  },
+};
 
 const faqItems = [
   {

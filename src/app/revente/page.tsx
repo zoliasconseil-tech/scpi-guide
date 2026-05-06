@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
+
+export const metadata: Metadata = {
+  title: "Revente SCPI : délais, liquidité, fiscalité et risques",
+  description:
+    "Comprendre comment revendre des parts de SCPI, les délais possibles, la liquidité, les frais, la fiscalité et les risques de blocage.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/revente",
+  },
+};
 
 const faqItems = [
   {

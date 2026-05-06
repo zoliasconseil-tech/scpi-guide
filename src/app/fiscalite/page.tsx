@@ -3,17 +3,17 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 
 export const metadata: Metadata = {
-  title: "Fiscalité des SCPI en 2026 : guide complet et indépendant",
+  title: "Fiscalité SCPI 2026 : impôts, revenus fonciers et optimisation",
   description:
-    "Tout comprendre sur la fiscalité des SCPI : revenus fonciers, impôt sur le revenu, prélèvements sociaux 17,2 %, IFI, plus-values, démembrement, assurance-vie, SCPI européennes et intérêts d'emprunt déductibles. Guide 2026.",
+    "Comprendre la fiscalité des SCPI en 2026 : revenus fonciers, prélèvements sociaux, SCPI européennes, assurance-vie, IFI et rendement net.",
   alternates: {
-    canonical: "https://scpi-gouv.org/fiscalite",
+    canonical: "https://www.scpi-gouv.org/fiscalite",
   },
   openGraph: {
-    title: "Fiscalité des SCPI en 2026 : guide complet et indépendant",
+    title: "Fiscalité SCPI 2026 : impôts, revenus fonciers et optimisation",
     description:
-      "Revenus fonciers, IFI, plus-values, assurance-vie, démembrement, SCPI européennes et intérêts d'emprunt — tous les régimes fiscaux des SCPI expliqués clairement.",
-    url: "https://scpi-gouv.org/fiscalite",
+      "Comprendre la fiscalité des SCPI en 2026 : revenus fonciers, prélèvements sociaux, SCPI européennes, assurance-vie, IFI et rendement net.",
+    url: "https://www.scpi-gouv.org/fiscalite",
     siteName: "SCPI Gouv",
     locale: "fr_FR",
     type: "article",

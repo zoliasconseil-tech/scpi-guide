@@ -2,17 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Avantages des SCPI en 2026 : 10 raisons d'investir en pierre-papier",
+  title: "Avantages SCPI : revenus, diversification et gestion déléguée",
   description:
-    "Découvrez les 10 principaux avantages des SCPI : diversification immobilière, gestion déléguée, rendement potentiel attractif, protection contre l'inflation, fiscalité optimisable et transmission patrimoniale facilitée. Guide complet et indépendant 2026.",
+    "Découvrez les principaux avantages des SCPI : accès à l'immobilier, mutualisation, revenus potentiels, diversification et gestion déléguée.",
   alternates: {
-    canonical: "https://scpi-gouv.org/avantages",
+    canonical: "https://www.scpi-gouv.org/avantages",
   },
   openGraph: {
-    title: "Avantages des SCPI en 2026 : 10 raisons d'investir en pierre-papier",
+    title: "Avantages SCPI : revenus, diversification et gestion déléguée",
     description:
-      "Tout ce qu'il faut savoir sur les avantages de l'investissement en SCPI : rendement, fiscalité optimisable, gestion passive, diversification patrimoniale et préparation de la retraite.",
-    url: "https://scpi-gouv.org/avantages",
+      "Découvrez les principaux avantages des SCPI : accès à l'immobilier, mutualisation, revenus potentiels, diversification et gestion déléguée.",
+    url: "https://www.scpi-gouv.org/avantages",
     siteName: "SCPI Gouv",
     locale: "fr_FR",
     type: "article",

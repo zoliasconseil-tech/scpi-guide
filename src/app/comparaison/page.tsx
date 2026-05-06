@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import ComparisonTool from "@/components/ComparisonTool";
 import SectionTitle from "@/components/SectionTitle";
+
+export const metadata: Metadata = {
+  title: "Comparaison SCPI : critères pour comparer avant d'investir",
+  description:
+    "Comparez les SCPI selon les critères essentiels : rendement, frais, patrimoine, liquidité, stratégie, fiscalité et niveau de risque.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/comparaison",
+  },
+};
 
 export default function ComparaisonPage() {
   return (

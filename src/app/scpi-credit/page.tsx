@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import SectionTitle from "@/components/SectionTitle";
 import ScpiCreditSimulator from "@/components/ScpiCreditSimulator";
+
+export const metadata: Metadata = {
+  title: "SCPI à crédit : simulation, financement et effort d'épargne",
+  description:
+    "Découvrez comment investir en SCPI à crédit, simuler l'effort d'épargne, comprendre l'effet de levier, les intérêts et les risques.",
+  alternates: {
+    canonical: "https://www.scpi-gouv.org/scpi-credit",
+  },
+};
 
 export default function ScpiCreditPage() {
   return (
