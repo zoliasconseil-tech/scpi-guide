@@ -13,6 +13,18 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "scpi-credit-avantages-limites",
+    title: "SCPI à crédit : avantages et limites à connaître",
+    excerpt:
+      "Les principaux avantages possibles et limites d’un investissement en SCPI à crédit : effet de levier, effort d’épargne, fiscalité, risques et liquidité.",
+  },
+  {
+    slug: "calcul-effort-epargne-scpi-credit",
+    title: "Comment calculer l’effort d’épargne d’une SCPI à crédit ?",
+    excerpt:
+      "Méthode de calcul, exemple chiffré et paramètres clés pour estimer l’effort d’épargne mensuel d’un investissement en SCPI financé à crédit.",
+  },
+  {
     slug: "scpi-fiscalite-ce-qu-il-faut-savoir",
     title: "Fiscalité des SCPI : ce qu’il faut savoir avant d’investir",
     excerpt:
