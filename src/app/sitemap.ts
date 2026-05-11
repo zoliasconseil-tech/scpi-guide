@@ -12,8 +12,8 @@ export default function sitemap() {
     { url: 'https://www.scpi-gouv.org/scpi-credit', lastModified: new Date() },
 
     { url: 'https://www.scpi-gouv.org/blog', lastModified: new Date() },
-    { url: 'https://www.scpi-gouv.org/blog/scpi-credit-avantages-limites', lastModified: new Date() },
-    { url: 'https://www.scpi-gouv.org/blog/calcul-effort-epargne-scpi-credit', lastModified: new Date() },
+    { url: 'https://www.scpi-gouv.org/scpi-credit-avantages-limites', lastModified: new Date() },
+    { url: 'https://www.scpi-gouv.org/calcul-effort-epargne-scpi-credit', lastModified: new Date() },
     { url: 'https://www.scpi-gouv.org/blog/acheter-des-scpi-a-credit', lastModified: new Date() },
     { url: 'https://www.scpi-gouv.org/blog/scpi-en-assurance-vie', lastModified: new Date() },
     { url: 'https://www.scpi-gouv.org/blog/scpi-fiscalite-ce-qu-il-faut-savoir', lastModified: new Date() },

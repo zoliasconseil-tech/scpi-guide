@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   description:
     "Découvrez les principaux avantages et limites d'un investissement en SCPI à crédit : effet de levier, effort d'épargne, fiscalité, risques et liquidité.",
   alternates: {
-    canonical: "https://www.scpi-gouv.org/blog/scpi-credit-avantages-limites",
+    canonical: "https://www.scpi-gouv.org/scpi-credit-avantages-limites",
   },
 };
 
-export default function ArticleScpiCreditAvantagesLimitesPage() {
+export default function ScpiCreditAvantagesLimitesPage() {
   return (
     <>
       <section className="page-hero">
@@ -360,7 +360,7 @@ export default function ArticleScpiCreditAvantagesLimitesPage() {
               Simulation SCPI à crédit →
             </Link>
             <Link
-              href="/blog/calcul-effort-epargne-scpi-credit"
+              href="/calcul-effort-epargne-scpi-credit"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
               Calculer l'effort d'épargne →

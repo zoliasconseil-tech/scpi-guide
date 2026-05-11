@@ -6,12 +6,11 @@ export const metadata: Metadata = {
   description:
     "Apprenez à estimer l'effort d'épargne d'une SCPI à crédit avec une méthode simple, un exemple chiffré et les principaux paramètres à prendre en compte.",
   alternates: {
-    canonical:
-      "https://www.scpi-gouv.org/blog/calcul-effort-epargne-scpi-credit",
+    canonical: "https://www.scpi-gouv.org/calcul-effort-epargne-scpi-credit",
   },
 };
 
-export default function ArticleCalculEffortEpargnePage() {
+export default function CalculEffortEpargneScpiCreditPage() {
   return (
     <>
       <section className="page-hero">
@@ -348,7 +347,7 @@ export default function ArticleCalculEffortEpargnePage() {
               <Link href="/scpi-credit" className="btn-primary">
                 Accéder au simulateur SCPI à crédit
               </Link>
-              <Link href="/blog/scpi-credit-avantages-limites" className="btn-secondary">
+              <Link href="/scpi-credit-avantages-limites" className="btn-secondary">
                 SCPI à crédit : avantages et limites
               </Link>
             </div>
@@ -378,7 +377,7 @@ export default function ArticleCalculEffortEpargnePage() {
               Simulateur SCPI à crédit →
             </Link>
             <Link
-              href="/blog/scpi-credit-avantages-limites"
+              href="/scpi-credit-avantages-limites"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
               Avantages et limites SCPI à crédit →

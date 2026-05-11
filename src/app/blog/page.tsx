@@ -14,12 +14,14 @@ export const metadata: Metadata = {
 const articles = [
   {
     slug: "scpi-credit-avantages-limites",
+    href: "/scpi-credit-avantages-limites",
     title: "SCPI à crédit : avantages et limites à connaître",
     excerpt:
       "Les principaux avantages possibles et limites d’un investissement en SCPI à crédit : effet de levier, effort d’épargne, fiscalité, risques et liquidité.",
   },
   {
     slug: "calcul-effort-epargne-scpi-credit",
+    href: "/calcul-effort-epargne-scpi-credit",
     title: "Comment calculer l’effort d’épargne d’une SCPI à crédit ?",
     excerpt:
       "Méthode de calcul, exemple chiffré et paramètres clés pour estimer l’effort d’épargne mensuel d’un investissement en SCPI financé à crédit.",
@@ -168,7 +170,7 @@ export default function BlogPage() {
             {articles.map((article) => (
               <Link
                 key={article.slug}
-                href={`/blog/${article.slug}`}
+                href={"href" in article ? (article as { href: string }).href : `/blog/${article.slug}`}
                 className="card transition hover:-translate-y-1"
               >
                 <h3 className="text-xl font-bold text-slate-900">

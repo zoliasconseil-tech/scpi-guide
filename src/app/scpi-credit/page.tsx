@@ -735,7 +735,7 @@ export default function ScpiCreditPage() {
             <p className="mt-5 text-[18px] leading-8 text-slate-700">
               Pour approfondir ce calcul, consultez notre article dédié :{" "}
               <Link
-                href="/blog/calcul-effort-epargne-scpi-credit"
+                href="/calcul-effort-epargne-scpi-credit"
                 className="font-semibold text-[var(--primary)] underline underline-offset-2"
               >
                 Comment calculer l'effort d'épargne d'une SCPI à crédit ?
@@ -834,7 +834,7 @@ export default function ScpiCreditPage() {
               Pour une analyse complète des avantages et des points de vigilance, consultez
               notre article :{" "}
               <Link
-                href="/blog/scpi-credit-avantages-limites"
+                href="/scpi-credit-avantages-limites"
                 className="font-semibold text-[var(--primary)] underline underline-offset-2"
               >
                 SCPI à crédit : avantages et limites à connaître
@@ -946,13 +946,13 @@ export default function ScpiCreditPage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/blog/scpi-credit-avantages-limites"
+              href="/scpi-credit-avantages-limites"
               className="rounded-[16px] border border-white/20 bg-white/10 px-5 py-4 text-[16px] font-semibold text-white shadow-sm transition hover:bg-white/20"
             >
               SCPI à crédit : avantages et limites →
             </Link>
             <Link
-              href="/blog/calcul-effort-epargne-scpi-credit"
+              href="/calcul-effort-epargne-scpi-credit"
               className="rounded-[16px] border border-white/20 bg-white/10 px-5 py-4 text-[16px] font-semibold text-white shadow-sm transition hover:bg-white/20"
             >
               Calculer l'effort d'épargne SCPI à crédit →
