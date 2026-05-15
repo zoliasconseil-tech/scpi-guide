@@ -405,8 +405,7 @@ export default function ReventePage() {
                 PRÉPARER
               </h3>
               <p className="text-[18px] leading-8 text-slate-700">
-                Identifier les <strong>points clés</strong> pour mieux préparer
-                une sortie : moment, prix, frais et impact patrimonial global.
+                Identifier les <strong>points à vérifier</strong> avant une cession : délai, prix, fiscalité et documents utiles.
               </p>
             </div>
           </div>
@@ -815,7 +814,7 @@ export default function ReventePage() {
               marginBottom: 28,
             }}
           >
-            3. Procédure détaillée de revente étape par étape
+            Procédure détaillée de revente étape par étape
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -1295,7 +1294,7 @@ export default function ReventePage() {
                   marginBottom: 24,
                 }}
               >
-                4. Prix de revente et décotes / surcotes
+                Prix de revente et décotes / surcotes
               </h2>
 
               <p className="text-[18px] leading-8 text-slate-700">
@@ -1570,7 +1569,7 @@ export default function ReventePage() {
               marginBottom: 28,
             }}
           >
-            7. Facteurs influençant la liquidité en 2026
+            Facteurs influençant la liquidité en 2026
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -1887,7 +1886,7 @@ export default function ReventePage() {
                 marginBottom: 24,
               }}
             >
-              8. Points à vérifier avant une revente
+              Points à vérifier avant une revente
             </h2>
 
             <ul className="list-disc pl-6 text-[18px] leading-8 text-slate-800">
@@ -1910,7 +1909,7 @@ export default function ReventePage() {
                 souple.
               </li>
               <li>
-                Consulter un expert pour évaluer le moment et le canal optimal.
+                Demander un avis professionnel pour mieux comprendre le moment et le canal de cession.
               </li>
             </ul>
           </div>
