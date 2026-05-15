@@ -232,7 +232,7 @@ export default function ReventePage() {
                 marginBottom: 22,
               }}
             >
-              Une sortie plus claire et mieux préparée
+              Une sortie mieux préparée
             </p>
 
             <p
@@ -402,11 +402,11 @@ export default function ReventePage() {
                   marginBottom: 20,
                 }}
               >
-                OPTIMISER
+                PRÉPARER
               </h3>
               <p className="text-[18px] leading-8 text-slate-700">
-                Utiliser les bonnes <strong>stratégies de cession</strong> pour
-                mieux gérer le moment, le prix et l'impact patrimonial global.
+                Identifier les <strong>points clés</strong> pour mieux préparer
+                une sortie : moment, prix, frais et impact patrimonial global.
               </p>
             </div>
           </div>
