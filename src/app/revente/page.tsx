@@ -2069,6 +2069,12 @@ export default function ReventePage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <Link
+              href="/revente-scpi-delai"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              délai de revente SCPI →
+            </Link>
+            <Link
               href="/fiscalite"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >

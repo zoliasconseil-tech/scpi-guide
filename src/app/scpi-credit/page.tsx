@@ -993,6 +993,12 @@ export default function ScpiCreditPage() {
           </h2>
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
+              href="/simulateur-scpi-credit"
+              className="rounded-[16px] border border-white/20 bg-white/10 px-5 py-4 text-[16px] font-semibold text-white shadow-sm transition hover:bg-white/20"
+            >
+              Interpréter une simulation SCPI à crédit →
+            </Link>
+            <Link
               href="/scpi-credit-avantages-limites"
               className="rounded-[16px] border border-white/20 bg-white/10 px-5 py-4 text-[16px] font-semibold text-white shadow-sm transition hover:bg-white/20"
             >

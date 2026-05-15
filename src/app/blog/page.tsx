@@ -13,6 +13,20 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: "revente-scpi-delai",
+    href: "/revente-scpi-delai",
+    title: "Délai de revente SCPI : combien de temps faut-il prévoir ?",
+    excerpt:
+      "Comprenez les délais possibles pour revendre des parts de SCPI : capital fixe ou variable, liquidité, marché secondaire, frais et points à vérifier avant une sortie.",
+  },
+  {
+    slug: "simulateur-scpi-credit",
+    href: "/simulateur-scpi-credit",
+    title: "Simulateur SCPI à crédit : comment interpréter les résultats ?",
+    excerpt:
+      "Comment lire une simulation SCPI à crédit : mensualité, revenus potentiels, effort d'épargne, fiscalité et limites de l'estimation indicative.",
+  },
+  {
     slug: "scpi-credit-avantages-limites",
     href: "/scpi-credit-avantages-limites",
     title: "SCPI à crédit : avantages et limites à connaître",

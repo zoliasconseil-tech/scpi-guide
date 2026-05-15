@@ -19,5 +19,7 @@ export default function sitemap() {
     { url: 'https://www.scpi-gouv.org/blog/scpi-fiscalite-ce-qu-il-faut-savoir', lastModified: new Date() },
     { url: 'https://www.scpi-gouv.org/blog/scpi-ou-immobilier-locatif', lastModified: new Date() },
     { url: 'https://www.scpi-gouv.org/blog/scpi-vs-immobilier-locatif', lastModified: new Date() },
+    { url: 'https://www.scpi-gouv.org/revente-scpi-delai', lastModified: new Date() },
+    { url: 'https://www.scpi-gouv.org/simulateur-scpi-credit', lastModified: new Date() },
   ];
 }
