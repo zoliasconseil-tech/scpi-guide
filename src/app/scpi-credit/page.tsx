@@ -98,7 +98,7 @@ export default function ScpiCreditPage() {
                 color: "var(--primary)",
               }}
             >
-              Simulateur SCPI à crédit : effort d’épargne et revenus à terme
+              Simulateur SCPI à crédit : calcul et effort d’épargne
             </h1>
 
             <p className="mb-5 text-[18px] leading-8 text-slate-700">
@@ -217,6 +217,26 @@ export default function ScpiCreditPage() {
             >
               Contenu pédagogique, indépendant et conçu pour être lisible
               rapidement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* RÉPONSE RAPIDE */}
+      <section className="section" style={{ background: "#f8faff", borderBottom: "1px solid var(--border)" }}>
+        <div className="container-site">
+          <div
+            className="rounded-[20px] px-8 py-7"
+            style={{ background: "rgba(240,194,79,0.10)", borderLeft: "4px solid #f0c24f" }}
+          >
+            <h2 className="mb-4 text-2xl font-bold text-slate-900" style={{ margin: "0 0 16px" }}>
+              Simulation SCPI à crédit : réponse rapide
+            </h2>
+            <p className="text-[18px] leading-8 text-slate-700">
+              Une simulation SCPI à crédit permet d'estimer l'effort d'épargne mensuel d'un projet financé par emprunt. Elle compare la mensualité du crédit, les revenus potentiels de la SCPI, la fiscalité et le montant restant à financer chaque mois.
+            </p>
+            <p className="mt-4 text-[18px] leading-8 text-slate-700">
+              Le résultat dépend notamment du montant investi, de l'apport, de la durée du prêt, du taux du crédit, du rendement retenu et de la situation fiscale de l'investisseur.
             </p>
           </div>
         </div>
@@ -370,7 +390,7 @@ export default function ScpiCreditPage() {
           <div className="content-block">
             <SectionTitle
               eyebrow="Utilité"
-              title="À quoi sert concrètement ce simulateur ?"
+              title="À quoi sert un simulateur SCPI à crédit ?"
               description="Le simulateur a pour vocation de fournir une première lecture simple, avant toute analyse plus poussée."
             />
 
@@ -684,12 +704,32 @@ export default function ScpiCreditPage() {
         </div>
       </section>
 
+      {/* CTA CONTACT */}
+      <section className="section" style={{ background: "#eaf0fb" }}>
+        <div className="container-site">
+          <div
+            className="rounded-[28px] px-10 py-10 text-center"
+            style={{ background: "white", border: "1px solid var(--border)" }}
+          >
+            <h2 className="mb-4 text-2xl font-bold text-[var(--primary)]">
+              Vous souhaitez estimer un projet SCPI à crédit ?
+            </h2>
+            <p className="mb-6 text-[18px] leading-8 text-slate-700">
+              Laissez vos coordonnées pour être recontacté et faire le point sur votre montant d'investissement, votre apport, votre durée de crédit et votre effort d'épargne estimé.
+            </p>
+            <Link href="/guide-pdf" className="btn-primary">
+              Être recontacté
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Comment calculer l'effort d'épargne */}
       <section className="section" style={{ background: "#eaf0fb" }}>
         <div className="container-site">
           <div className="content-block" style={{ maxWidth: 820 }}>
             <h2 className="mt-0 mb-4 text-3xl font-bold text-slate-900">
-              Comment calculer l'effort d'épargne d'une SCPI à crédit ?
+              Calcul SCPI à crédit : comment estimer l'effort d'épargne ?
             </h2>
             <p className="text-[18px] leading-8 text-slate-700">
               L'effort d'épargne représente la somme mensuelle que l'investisseur
@@ -775,10 +815,10 @@ export default function ScpiCreditPage() {
             </p>
             <p className="mt-5 text-[18px] leading-8 text-slate-700">
               <strong>Cas particulier des SCPI européennes :</strong> les SCPI
-              investissant hors de France bénéficient dans la plupart des cas de
-              conventions fiscales bilatérales qui peuvent réduire ou supprimer les
-              prélèvements sociaux français (17,2 %). Le traitement fiscal exact dépend
-              de chaque convention et doit être vérifié selon la situation personnelle.
+              investissant hors de France peuvent relever de conventions fiscales
+              bilatérales. Selon les pays et la situation de l'investisseur, le
+              traitement fiscal peut différer de celui des SCPI françaises, notamment
+              sur les prélèvements sociaux.
             </p>
             <p className="mt-5 text-[18px] leading-8 text-slate-700">
               La{" "}
@@ -868,7 +908,13 @@ export default function ScpiCreditPage() {
                 gestion de la SCPI.
               </li>
               <li className="mb-3">
-                <strong>Liquidité non garantie :</strong> la revente de parts de SCPI
+                <strong>Liquidité non garantie :</strong> la{" "}
+                <Link
+                  href="/revente"
+                  className="font-semibold text-[var(--primary)] underline underline-offset-2"
+                >
+                  revente de parts de SCPI
+                </Link>{" "}
                 n'est pas immédiate. Des délais variables existent selon le type de SCPI
                 et les conditions du marché.
               </li>
