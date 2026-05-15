@@ -818,7 +818,8 @@ export default function ScpiCreditPage() {
               investissant hors de France peuvent relever de conventions fiscales
               bilatérales. Selon les pays et la situation de l'investisseur, le
               traitement fiscal peut différer de celui des SCPI françaises, notamment
-              sur les prélèvements sociaux.
+              sur les prélèvements sociaux. Le traitement fiscal exact dépend de chaque
+              convention et doit être vérifié selon la situation personnelle.
             </p>
             <p className="mt-5 text-[18px] leading-8 text-slate-700">
               La{" "}
