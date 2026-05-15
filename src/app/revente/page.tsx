@@ -244,9 +244,9 @@ export default function ReventePage() {
                 marginBottom: 30,
               }}
             >
-              Comprenez rapidement les mécanismes de retrait, les différences
+              Comprenez les mécanismes de retrait, les différences
               entre capital fixe et variable, les risques de décote, les délais
-              possibles et les points utiles pour préparer une sortie.
+              possibles et les points à vérifier avant une sortie.
             </p>
 
             <div className="space-y-4">
