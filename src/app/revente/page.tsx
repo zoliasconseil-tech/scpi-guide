@@ -3,9 +3,9 @@ import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
-  title: "Revente SCPI : délais, liquidité, fiscalité et risques",
+  title: "Revente SCPI : délai, frais et fonctionnement",
   description:
-    "Comprendre comment revendre des parts de SCPI, les délais possibles, la liquidité, les frais, la fiscalité et les risques de blocage.",
+    "Comprenez comment fonctionne la revente de parts de SCPI : délais, frais, capital fixe ou variable, fiscalité et points à vérifier avant de vendre.",
   alternates: {
     canonical: "https://www.scpi-gouv.org/revente",
   },
@@ -138,8 +138,7 @@ export default function ReventePage() {
                 color: "var(--primary)",
               }}
             >
-              Revente des parts de SCPI en 2026 : les points essentiels à
-              connaître
+              Revente SCPI : délai, frais et fonctionnement
             </h1>
 
             <p
@@ -233,7 +232,7 @@ export default function ReventePage() {
                 marginBottom: 22,
               }}
             >
-              Une sortie plus claire, plus maîtrisée et mieux préparée
+              Une sortie plus claire et mieux préparée
             </p>
 
             <p
@@ -247,7 +246,7 @@ export default function ReventePage() {
             >
               Comprenez rapidement les mécanismes de retrait, les différences
               entre capital fixe et variable, les risques de décote, les délais
-              possibles et les stratégies utiles pour optimiser une sortie.
+              possibles et les points utiles pour préparer une sortie.
             </p>
 
             <div className="space-y-4">
@@ -281,6 +280,26 @@ export default function ReventePage() {
             >
               Contenu pédagogique, indépendant et conçu pour être lisible
               rapidement.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* RÉPONSE RAPIDE */}
+      <section className="section" style={{ background: "#f8faff", borderBottom: "1px solid var(--border)" }}>
+        <div className="container-site">
+          <div
+            className="rounded-[20px] px-8 py-7"
+            style={{ background: "rgba(240,194,79,0.10)", borderLeft: "4px solid #f0c24f" }}
+          >
+            <h2 className="mb-4 text-2xl font-bold text-slate-900" style={{ margin: "0 0 16px" }}>
+              Revente SCPI : réponse rapide
+            </h2>
+            <p className="text-[18px] leading-8 text-slate-700">
+              La revente de parts de SCPI n'est pas toujours immédiate. Le délai dépend du type de SCPI, du niveau de demande, du marché secondaire et du nombre de parts en attente de retrait.
+            </p>
+            <p className="mt-4 text-[18px] leading-8 text-slate-700">
+              En pratique, une revente peut prendre quelques semaines pour une SCPI liquide, plusieurs mois dans un marché standard, et davantage si la SCPI connaît un volume important de retraits.
             </p>
           </div>
         </div>
@@ -440,7 +459,7 @@ export default function ReventePage() {
               marginBottom: 12,
             }}
           >
-            Délais réels de revente des SCPI
+            Quel est le délai de revente d'une SCPI ?
           </h2>
           <p className="mb-10 text-[18px] leading-8 text-slate-600">
             La liquidité est un élément clé à analyser avant d'investir en SCPI.
@@ -591,6 +610,26 @@ export default function ReventePage() {
         </div>
       </section>
 
+      {/* CTA — REVENTE */}
+      <section className="section" style={{ background: "#eaf0fb" }}>
+        <div className="container-site">
+          <div
+            className="rounded-[28px] px-10 py-10 text-center"
+            style={{ background: "white", border: "1px solid var(--border)" }}
+          >
+            <h2 className="mb-4 text-2xl font-bold text-[var(--primary)]">
+              Vous envisagez de revendre des parts de SCPI ?
+            </h2>
+            <p className="mb-6 text-[18px] leading-8 text-slate-700">
+              Laissez vos coordonnées pour être recontacté et faire le point sur votre situation, les délais possibles et les documents à vérifier.
+            </p>
+            <Link href="/guide-pdf" className="btn-primary">
+              Être recontacté
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 1 */}
       <section className="section">
         <div className="container-site grid gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:items-start">
@@ -605,7 +644,7 @@ export default function ReventePage() {
                 marginBottom: 24,
               }}
             >
-              1. Principes généraux de la revente des parts de SCPI
+              Peut-on revendre ses parts de SCPI à tout moment ?
             </h2>
 
             <p className="text-[18px] leading-8 text-slate-700">
@@ -693,7 +732,7 @@ export default function ReventePage() {
                   fontWeight: 800,
                 }}
               >
-                2. Différence entre SCPI à capital variable et à capital fixe
+                Revente SCPI à capital fixe ou variable : quelles différences ?
               </h2>
 
               <div className="mt-8 text-[18px] leading-8 text-slate-800">
@@ -1134,7 +1173,7 @@ export default function ReventePage() {
               >
                 Comparer les SCPI
               </Link>{" "}
-              avant d'investir reste la meilleure façon d'anticiper ce risque.
+              avant d'investir reste une bonne façon d'anticiper ce risque.
             </p>
           </div>
         </div>
@@ -1185,8 +1224,8 @@ export default function ReventePage() {
               </li>
               <li className="mb-3">
                 <strong>Anticipation fiscale :</strong> profiter des abattements
-                progressifs liés à la durée de détention pour optimiser la
-                fiscalité de la plus-value.
+                progressifs liés à la durée de détention pour réduire l'imposition
+                sur la plus-value.
               </li>
               <li>
                 <strong>Opportunité de réallocation :</strong> arbitrer vers une
@@ -1336,7 +1375,7 @@ export default function ReventePage() {
                 marginBottom: 24,
               }}
             >
-              5. Frais liés à la revente
+              Quels frais lors d'une revente de SCPI ?
             </h2>
 
             <ul className="list-disc pl-6 text-[18px] leading-8 text-slate-800">
@@ -1388,7 +1427,7 @@ export default function ReventePage() {
                 marginBottom: 24,
               }}
             >
-              6. Fiscalité de la plus-value à la revente
+              Fiscalité lors de la revente de parts de SCPI
             </h2>
 
             <p className="text-[18px] leading-8 text-slate-800">
@@ -1495,6 +1534,16 @@ export default function ReventePage() {
               <li>Parts détenues en assurance-vie.</li>
               <li>Démembrement : règles spécifiques selon usufruit et nue-propriété.</li>
             </ul>
+
+            <p className="mt-6 text-[17px] leading-7 text-slate-600">
+              Pour les modalités pratiques de déclaration, consultez notre guide sur la{" "}
+              <Link
+                href="/declaration-scpi-2026"
+                className="font-semibold underline text-[var(--primary)]"
+              >
+                déclaration SCPI 2026
+              </Link>.
+            </p>
           </div>
 
           <div className="cta-row mt-8">
@@ -1838,7 +1887,7 @@ export default function ReventePage() {
                 marginBottom: 24,
               }}
             >
-              8. Stratégies pour optimiser une revente
+              8. Points à vérifier avant une revente
             </h2>
 
             <ul className="list-disc pl-6 text-[18px] leading-8 text-slate-800">
@@ -2019,30 +2068,56 @@ export default function ReventePage() {
           >
             À lire aussi sur les SCPI
           </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             <Link
               href="/fiscalite"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
-              Fiscalité des SCPI →
+              fiscalité des SCPI →
             </Link>
             <Link
               href="/declaration-scpi-2026"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
-              Déclarer ses revenus SCPI →
+              déclaration SCPI 2026 →
+            </Link>
+            <Link
+              href="/scpi-credit"
+              className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
+            >
+              SCPI à crédit →
             </Link>
             <Link
               href="/comparaison"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
-              Comparer les SCPI →
+              comparer les SCPI →
             </Link>
             <Link
               href="/guide-pdf"
               className="rounded-[16px] border border-[var(--border)] bg-white px-5 py-4 text-[16px] font-semibold text-[var(--primary)] shadow-sm transition hover:shadow-md"
             >
               Guide SCPI gratuit →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA FIN DE PAGE */}
+      <section className="section" style={{ background: "#f8f0df" }}>
+        <div className="container-site">
+          <div
+            className="rounded-[28px] px-10 py-10 text-center"
+            style={{ background: "white", border: "1px solid var(--border)" }}
+          >
+            <h2 className="mb-4 text-2xl font-bold text-[var(--primary)]">
+              Besoin d&apos;un point sur la revente de vos SCPI ?
+            </h2>
+            <p className="mb-6 text-[18px] leading-8 text-slate-700">
+              Demandez un échange pour mieux comprendre les délais, la fiscalité et les étapes de sortie.
+            </p>
+            <Link href="/guide-pdf" className="btn-primary">
+              Demander un rappel
             </Link>
           </div>
         </div>
